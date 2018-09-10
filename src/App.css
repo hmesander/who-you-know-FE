@@ -8,21 +8,42 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #283e4a;
+  height: 30px;
   padding: 20px;
-  color: white;
+  display: flex;
+  color: #fff;
+  justify-content: flex-start;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.login-button {
+  color: #fff;
+  height: 34px;
+  line-height: 32px;
+  width: 200px;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f6e312;
+  border: 1px solid #e9ac1a;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #f6e312 0%,#f9c80d 100%);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+}
+
+.login-button:hover {
+  background-image: linear-gradient(to bottom, #eddb11 0%,#efcf14 35%,#f1bf18 65%,#f2b21b 100%);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
