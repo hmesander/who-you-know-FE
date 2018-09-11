@@ -46,7 +46,6 @@ class App extends Component {
     var accessToken = parsedUrl[0];
     var idToken = parsedUrl2[1];
     }
-    console.log(accessToken, idToken)
     this.postTokens(accessToken, idToken)
   }
 
@@ -65,13 +64,13 @@ class App extends Component {
     let button;
     if (this.state.hash !== '') {
       button = <button
-          className="login-button"
+          className="login-button logout"
           onClick={this.handleLogout}>
           Logout
         </button>
     } else {
       button = <button
-          className="login-button"
+          className="login-button login"
           onClick={this.handleLogin}>
           Login
         </button>
