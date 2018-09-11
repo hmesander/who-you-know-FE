@@ -25,13 +25,17 @@ class App extends Component {
   this.parseURL(history.location.hash)
   }
 
-  handleLogin = () => {
-    auth.login();
+  handleLogin = async () => {
+    await auth.login();
   }
 
    handleLogout = () => {
     console.log('logout')
     auth.logout();
+    localStorage.clear()
+    this.setState({
+      hash: ''
+    })
   }
 
   parseURL = url => {
@@ -54,14 +58,12 @@ class App extends Component {
       idToken
     })
     });
-    const results = await response.json();
+    // const results = await response.json();
   }
 
   render() {
-
-    const isAuthenticated = auth.isAuthenticated();
     let button;
-    if (isAuthenticated) {
+    if (this.state.hash !== '') {
       button = <button
           className="login-button"
           onClick={this.handleLogout}>
