@@ -8,7 +8,7 @@
     0 11px 1px -4px rgba(0,0,0,0.15),
     0 22px 0 -10px #eee,
     0 22px 1px -9px rgba(0,0,0,0.15);
-  width: 75%;
+  width: 70%;
   min-height: fit-content;
   height: 60vh;
   margin: 40px auto;
@@ -20,7 +20,7 @@
 
 .circle-buttons {
   border-radius: 50%;
-  margin: 36px;
+  margin: 16px;
   width: 65px;
   height: 65px;
   text-align: center;
@@ -42,5 +42,5 @@
 }
 
 .card-button-container {
-  /* margin-bottom: 50px; */
+  margin-bottom: 50px;
 }

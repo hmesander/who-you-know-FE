@@ -35,14 +35,14 @@ class App extends Component {
           you
           know.</h1>
         </header>
-        {/* <p className="App-intro">
+        <p className="App-intro">
           To get started, please login.
         </p>
         <button 
           className="login-button" 
           onClick={this.handleLogin}>
           Login
-        </button> */}
+        </button>
         {/* <Route exact path='/' component={Login} /> */}
         <Route exact path='/welcome/' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
         <Route path='/sort/' render={() => <Sort />} />
