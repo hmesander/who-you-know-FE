@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Auth from './Auth/Auth.js';
 import history from './history';
-
 const auth = new Auth();
-console.log(history.location.hash)
-
 
 class App extends Component {
   constructor() {
@@ -13,16 +10,16 @@ class App extends Component {
 
     this.state = {
       hash: ''
-    }
+    };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     if (history.location.hash) {
-    this.setState({
-      hash: history.location.hash
-    })
-  }
-  this.parseURL(history.location.hash)
+      await this.setState({
+        hash: history.location.hash
+      });
+    }
+    await this.parseURL(history.location.hash);
   }
 
   handleLogin = async () => {
@@ -30,33 +27,31 @@ class App extends Component {
   }
 
    handleLogout = () => {
-    console.log('logout')
-    auth.logout();
-    localStorage.clear()
-    this.setState({
-      hash: ''
-    })
-  }
+     auth.logout();
+     this.setState({
+       hash: ''
+     });
+   }
 
   parseURL = url => {
     let splitUrl = url.split('#access_token=');
-    if (splitUrl[1]) {
-      let parsedUrl = splitUrl[1].split('&scope=openid&expires_in=7200&token_type=Bearer&state=')
-      const parsedUrl2 = parsedUrl[1].split('&id_token=')
-    var accessToken = parsedUrl[0];
-    var idToken = parsedUrl2[1];
+    if (splitUrl.length > 1) {
+      let accessToken = splitUrl[1].split('&expires_in=')[0];
+      let idToken = splitUrl[1].split('&id_token=')[1];
+      // this.postTokens(accessToken, id_token);
+      return {idToken, accessToken};
     }
-    this.postTokens(accessToken, idToken)
   }
 
   postTokens = async (accessToken, idToken) => {
-    const response = await fetch('/api/v1/users', {
-      method: 'POST',
-      body: JSON.stringify({
-      accessToken,
-      idToken
-    })
-    });
+    console.log('postTokens');
+    // const response = await fetch('/api/v1/users', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     accessToken,
+    //     idToken
+    //   })
+    // });
     // const results = await response.json();
   }
 
@@ -64,19 +59,19 @@ class App extends Component {
     let button;
     if (this.state.hash !== '') {
       button = <button
-          className="login-button logout"
-          onClick={this.handleLogout}>
+        className="login-button logout"
+        onClick={this.handleLogout}>
           Logout
-        </button>
+      </button>;
     } else {
       button = <button
-          className="login-button login"
-          onClick={this.handleLogin}>
+        className="login-button login"
+        onClick={this.handleLogin}>
           Login
-        </button>
+      </button>;
     }
 
-      return (
+    return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Who
