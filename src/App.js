@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import LinkedInButton from './images/LinkedInSignIn.png';
 import { authorizeUser } from './helpers/apiCalls.js';
 
 class App extends Component {
@@ -16,17 +17,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Who 
-          you
-          know.</h1>
+          Who <div className="you"> You </div> Know.
         </header>
-        <p className="App-intro">
-          To get started, please login.
-        </p>
-        <button 
-          className="login-button" 
-          onClick={this.handleLogin}>
-          Login
+        <button className="login-button" onClick={this.handleLogin} >
+          <img src={LinkedInButton} alt="Log In with LinkedIn" />
         </button>
       </div>
     );
