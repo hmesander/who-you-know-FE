@@ -4,14 +4,18 @@ import Controls from './Controls.js';
 import Login from './Login.js';
 import Sort from './Sort.js';
 import './App.css';
-import { authorizeUser } from './helpers/apiCalls.js';
+import Auth from './Auth/Auth.js';
+import history from './history';
+const auth = new Auth();
 
 class App extends Component {
   constructor() {
     super();
 
+    this.state = {
+      hash: ''
+    };
   }
-
   handleLogin = () => {
     console.log('click');
     this.props.history.push('/welcome');
@@ -28,10 +32,25 @@ class App extends Component {
   }
 
   render() {
+    let button;
+    if (this.state.hash !== '') {
+      button = <button
+        className="login-button logout"
+        onClick={this.handleLogout}>
+          Logout
+      </button>;
+    } else {
+      button = <button
+        className="login-button login"
+        onClick={this.handleLogin}>
+          Login
+      </button>;
+    }
+
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Who 
+          <h1 className="App-title">Who
           you
           know.</h1>
         </header>
@@ -48,7 +67,7 @@ class App extends Component {
         <Route path='/sort/' render={() => <Sort />} />
       </div>
     );
+    
   }
 }
-
 export default withRouter(App);
