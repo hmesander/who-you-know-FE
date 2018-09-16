@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { Route, withRouter } from 'react-router-dom';
+import Controls from './Controls.js';
+import Login from './Login.js';
+import Sort from './Sort.js';
 import './App.css';
 import Auth from './Auth/Auth.js';
 import history from './history';
@@ -12,47 +16,19 @@ class App extends Component {
       hash: ''
     };
   }
-
-  async componentDidMount() {
-    if (history.location.hash) {
-      await this.setState({
-        hash: history.location.hash
-      });
-    }
-    await this.parseURL(history.location.hash);
+  handleLogin = () => {
+    console.log('click');
+    this.props.history.push('/welcome');
   }
 
-  handleLogin = async () => {
-    await auth.login();
+  handleSort = () => {
+    console.log('sort');
+    this.props.history.push('/sort');
   }
 
-   handleLogout = () => {
-     auth.logout();
-     this.setState({
-       hash: ''
-     });
-   }
-
-  parseURL = url => {
-    let splitUrl = url.split('#access_token=');
-    if (splitUrl.length > 1) {
-      let accessToken = splitUrl[1].split('&expires_in=')[0];
-      let idToken = splitUrl[1].split('&id_token=')[1];
-      // this.postTokens(accessToken, id_token);
-      return {idToken, accessToken};
-    }
-  }
-
-  postTokens = async (accessToken, idToken) => {
-    console.log('postTokens');
-    // const response = await fetch('/api/v1/users', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     accessToken,
-    //     idToken
-    //   })
-    // });
-    // const results = await response.json();
+  handlePlayDeck = () => {
+    console.log('play');
+    this.props.history.push('/play');
   }
 
   render() {
@@ -81,11 +57,17 @@ class App extends Component {
         <p className="App-intro">
           To get started, please login.
         </p>
-        {button}
+        <button 
+          className="login-button" 
+          onClick={this.handleLogin}>
+          Login
+        </button>
+        {/* <Route exact path='/' component={Login} /> */}
+        <Route exact path='/welcome/' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
+        <Route path='/sort/' render={() => <Sort />} />
       </div>
     );
     
   }
 }
-
-export default App;
+export default withRouter(App);
