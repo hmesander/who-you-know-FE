@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Controls from '../Controls/Controls.js';
-// import Login from './Login.js';
 import Sort from '../Sort/Sort.js';
 import PlayCards from '../PlayCards/PlayCards.js';
 import './App.css';
 import Auth from '../../Auth/Auth.js';
 import history from '../../history';
+import { postTokens } from '../../helpers/apiCalls.js';
 const auth = new Auth();
 
 class App extends Component {
@@ -14,7 +14,10 @@ class App extends Component {
     super();
 
     this.state = {
-      hash: ''
+      hash: '',
+      idToken: '',
+      accessToken: '',
+      userId: ''
     };
   }
 
@@ -23,13 +26,20 @@ class App extends Component {
       await this.setState({
         hash: history.location.hash
       });
-    }
-    await this.parseURL(history.location.hash);
+      let { idToken, accessToken } = await this.parseURL(history.location.hash);
+      this.setState({
+        idToken,
+        accessToken
+      });
+      let results = await postTokens(this.state.accessToken, this.state.idToken);
+      this.setState({
+        userId: results.id
+      });
+    } 
   }
 
   handleLogin = async () => {
     await auth.login();
-    this.props.history.push('/welcome');
   }
 
   handleLogout = () => {
@@ -52,21 +62,8 @@ class App extends Component {
     if (splitUrl.length > 1) {
       let accessToken = splitUrl[1].split('&expires_in=')[0];
       let idToken = splitUrl[1].split('&id_token=')[1];
-      // this.postTokens(accessToken, id_token);
       return { idToken, accessToken };
     }
-  }
-
-  postTokens = async (accessToken, idToken) => {
-    console.log('postTokens');
-    // const response = await fetch('/api/v1/users', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     accessToken,
-    //     idToken
-    //   })
-    // });
-    // const results = await response.json();
   }
 
   render() {
@@ -101,8 +98,8 @@ class App extends Component {
         </header>
         {display}
         <Route path='/callback' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
-        <Route path='/sort/' render={() => <Sort />} />
-        <Route path='/play/' render={() => <PlayCards />} />
+        <Route exact path='/sort' render={() => <Sort userId={this.state.userId}/>} />
+        <Route exact path='/play' render={() => <PlayCards userId={this.state.userId}/>} />
       </div>
     );
     

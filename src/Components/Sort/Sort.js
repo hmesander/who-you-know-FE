@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card.js';
 import mockData from '../../helpers/mockData';
+import { getConnectionsForUser, updateDifficultyLevel } from '../../helpers/apiCalls.js';
 
 export default class Sort extends Component {
   constructor() {
@@ -12,17 +13,17 @@ export default class Sort extends Component {
   }
 
   async componentDidMount() {
-    const cards = await this.fetchCardsToSort();
+    const cards = await getConnectionsForUser(this.props.userId);
     this.setState({
       cards
     });
   }
 
-  fetchCardsToSort = () => {
-    console.log('fetch sort');
-    // fetch call to retrieve cards to sort, save to variable and return them
-    return mockData;
-  }
+  // fetchCardsToSort = () => {
+  //   console.log('fetch sort');
+  //   fetch call to retrieve cards to sort, save to variable and return them
+  //   return mockData;
+  // }
 
   getNewCard = () => {
     if (this.state.cards.length) {
@@ -33,23 +34,21 @@ export default class Sort extends Component {
       });
       return cardToSave;
     }
-    // if cards.length === 0, send sorted array to database
   }
 
   handleUpVote = () => {
     let cardToSave = this.getNewCard();
-    // add property to card of knowledge level with value of two and push it into sorted array in state 
-    console.log(cardToSave);
+    updateDifficultyLevel(this.props.userId, cardToSave.id, 'easy');
   }
 
   handleMiddleVote = () => {
     let cardToSave = this.getNewCard();
-    // add property to card of knowledge level with value of one and push it into sorted array in state
+    updateDifficultyLevel(this.props.userId, cardToSave.id, 'medium');
   }
 
   handleDownVote = () => {
     let cardToSave = this.getNewCard();
-    // add property to card of knowledge level with value of zero and push it into sorted array in state
+    updateDifficultyLevel(this.props.userId, cardToSave.id, 'hard');
   }
 
   render() {
