@@ -14,9 +14,17 @@ const Card = (props) => {
           <hr className='card-hr'></hr>
         </div>
         <div className='card-button-container'>
-          <button className='circle-buttons'>No Clue</button>
-          <button className='circle-buttons'>Vague Idea</button>
-          <button className='circle-buttons' onClick={() => { props.handleUpVote() }}>BFF</button>
+          <button 
+            className='circle-buttons'
+            onClick={() => { props.handleUpVote() }}
+          >No Clue</button>
+          <button 
+            className='circle-buttons'
+            onClick={() => { props.handleMiddleVote() }}
+          >Vague Idea</button>
+          <button 
+            className='circle-buttons' 
+            onClick={() => { props.handleUpVote() }}>BFF</button>
         </div>
       </div>
     );

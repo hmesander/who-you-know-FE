@@ -33,16 +33,23 @@ export default class Sort extends Component {
   }
 
   handleUpVote = () => {
-    console.log('handleUpvote');
     let cardToSave = this.getNewCard();
     console.log(cardToSave);
+  }
+
+  handleMiddleVote = () => {
+    let cardToSave = this.getNewCard();
+  }
+
+  handleDownVote = () => {
+    let cardToSave = this.getNewCard();
   }
 
 
   render() {
     return (
       <div>
-        <Card cards={this.state.cards} handleUpVote={this.handleUpVote}/>
+        <Card cards={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote}/>
       </div>
     );
   }
