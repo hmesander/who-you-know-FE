@@ -16,7 +16,6 @@ export default class PlayCards extends Component {
   }
 
   setDifficulty = (event) => {
-    console.log(event.target.value);
     this.setState({
       difficulty: event.target.value
     });
@@ -25,8 +24,6 @@ export default class PlayCards extends Component {
 
   fetchCardsToPlay = async (difficulty) => {
     let results = await retrieveCardsToPlay(1, difficulty);
-    // fetch call to retrieve cards to sort, save to variable and return them
-    console.log(results);
     this.setState({
       cards: mockData
     });
