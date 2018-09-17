@@ -19,11 +19,11 @@ export default class Sort extends Component {
     });
   }
 
-  fetchCardsToSort = () => {
-    console.log('fetch sort');
-    // fetch call to retrieve cards to sort, save to variable and return them
-    return mockData;
-  }
+  // fetchCardsToSort = () => {
+  //   console.log('fetch sort');
+  //   fetch call to retrieve cards to sort, save to variable and return them
+  //   return mockData;
+  // }
 
   getNewCard = () => {
     if (this.state.cards.length) {
@@ -34,7 +34,6 @@ export default class Sort extends Component {
       });
       return cardToSave;
     }
-    // if cards.length === 0, send sorted array to database
   }
 
   handleUpVote = () => {
@@ -45,8 +44,6 @@ export default class Sort extends Component {
   handleMiddleVote = () => {
     let cardToSave = this.getNewCard();
     updateDifficultyLevel(this.props.userId, cardToSave.id, 'medium');
-
-
   }
 
   handleDownVote = () => {
