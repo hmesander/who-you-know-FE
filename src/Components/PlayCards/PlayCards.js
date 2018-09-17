@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card/Card.js';
 import mockData from '../../helpers/mockData.js';
 import { retrieveCardsToPlay } from '../../helpers/apiCalls.js';
+import GameBoard from '../GameBoard/GameBoard.js';
 
 export default class PlayCards extends Component {
   constructor() {
@@ -30,6 +31,11 @@ export default class PlayCards extends Component {
     return results;
   }
 
+  showGuessField = () => {
+    let display = <div>Form</div>;
+    return display;
+  }
+
   render() {
     if (!this.state.difficulty) {
       return (
@@ -42,7 +48,7 @@ export default class PlayCards extends Component {
     } else {
       return (
         <div>
-          <Card cardsToPlay={this.state.cards} />
+          <GameBoard cardsToPlay={this.state.cards} />
         </div>
       );
     } 
