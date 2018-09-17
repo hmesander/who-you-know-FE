@@ -16,7 +16,7 @@ export default class PlayCards extends Component {
   async componentDidMount() {
     const cards = await this.fetchCardsToPlay();
     this.setState({
-      cards
+      cards: cards
     });
   }
 
@@ -29,7 +29,7 @@ export default class PlayCards extends Component {
   render() {
     return (
       <div>
-        <Card cards={this.state.cards} />
+        <Card cardsToPlay={this.state.cards} />
       </div>
     );
   }

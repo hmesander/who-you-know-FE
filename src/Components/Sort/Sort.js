@@ -55,7 +55,7 @@ export default class Sort extends Component {
   render() {
     return (
       <div>
-        <Card cards={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote}/>
+        <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote}/>
       </div>
     );
   }
