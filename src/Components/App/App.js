@@ -71,18 +71,18 @@ class App extends Component {
     if (this.state.hash !== '') {
       display = 
       <button
-        className="login-button logout"
+        className="buttons logout-button"
         onClick={this.handleLogout}>
           Logout
       </button>;
     } else {
       display = 
-      <div>
+      <div className="login-container">
         <p className="App-intro">
           To get started, please login.
         </p>
         <button
-          className="login-button login"
+          className="buttons login-button"
           onClick={this.handleLogin}>
           Login
         </button>
@@ -95,8 +95,8 @@ class App extends Component {
           <h1 className="App-title">Who
           you
           know.</h1>
+          {display}
         </header>
-        {display}
         <Route path='/callback' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
         <Route exact path='/sort' render={() => <Sort userId={this.state.userId}/>} />
         <Route exact path='/play' render={() => <PlayCards userId={this.state.userId}/>} />

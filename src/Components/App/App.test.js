@@ -14,14 +14,14 @@ describe('APP TESTS', () => {
   it('displays a login button if the user is not logged in', () => {
     const wrapper = shallow(<App history={''}/>, { disableLifecycleMethods: true });
     
-    expect(wrapper.find('.login').length).toEqual(1);
+    expect(wrapper.find('.login-button').length).toEqual(1);
   });
 
   it('displays a logout button if the user is logged in', () => {
     const wrapper = shallow(<App/>, { disableLifecycleMethods: true });
     wrapper.instance().setState({hash: 'taco'});
     
-    expect(wrapper.find('.logout').length).toEqual(1);
+    expect(wrapper.find('.logout-button').length).toEqual(1);
   });
 
   it('calls the login function when a user clicks the login button', () => {
@@ -29,7 +29,7 @@ describe('APP TESTS', () => {
     const spy = spyOn(wrapper.instance(), 'handleLogin');
     wrapper.instance().forceUpdate();
 
-    wrapper.find('.login').simulate('click');
+    wrapper.find('.login-button').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });
@@ -40,7 +40,7 @@ describe('APP TESTS', () => {
     const spy = spyOn(wrapper.instance(), 'handleLogout');
     wrapper.instance().forceUpdate();
 
-    wrapper.find('.logout').simulate('click');
+    wrapper.find('.logout-button').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });
