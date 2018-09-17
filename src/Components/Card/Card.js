@@ -3,13 +3,13 @@ import './Card.css';
 
 const Card = (props) => {
   
-  if (props.cardsToSort) {
+  if (props.cardsToSort && props.cardsToSort.length) {
     return (
       <div className='card-component'>
         <div className='card-info-section'>
-          <img src={props.cardsToSort[0].imgUrl} alt="Smiley face" className="circle-image"></img>
-          <h3 className=''>{props.cardsToSort[0].name}</h3>
-          <h6>{props.cardsToSort[0].title}</h6>
+          <img src={props.cardsToSort[0].image_url} alt="Smiley face" className="circle-image"></img>
+          <h3 className=''>{props.cardsToSort[0].first_last_name}</h3>
+          <h6>{props.cardsToSort[0].job_title}</h6>
           <h6>{props.cardsToSort[0].school}</h6>
           <hr className='card-hr'></hr>
         </div>
@@ -45,7 +45,7 @@ const Card = (props) => {
           >School</button>
           <button
             className='circle-buttons'
-            >Job Title</button>
+          >Job Title</button>
         </div>
       </div>
     );
