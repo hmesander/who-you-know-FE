@@ -3,6 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Controls from '../Controls/Controls.js';
 // import Login from './Login.js';
 import Sort from '../Sort/Sort.js';
+import PlayCards from '../PlayCards/PlayCards.js';
 import './App.css';
 import Auth from '../../Auth/Auth.js';
 import history from '../../history';
@@ -99,9 +100,9 @@ class App extends Component {
           know.</h1>
         </header>
         {display}
-        {/* <Route exact path='/' component={Login} /> */}
         <Route path='/callback' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
         <Route path='/sort/' render={() => <Sort />} />
+        <Route path='/play/' render={() => <PlayCards />} />
       </div>
     );
     
