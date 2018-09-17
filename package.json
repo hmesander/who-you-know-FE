@@ -14,7 +14,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js --ignore-pattern *registerServiceWorker.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/Components/*/*.js --ignore-pattern *registerServiceWorker.js",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
