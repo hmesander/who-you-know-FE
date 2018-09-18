@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- node
+script:
+- npm test
+notifications:
+  email: false
+deploy:
+  api_key:
+    secure: bv+jZp+oJ0qBO77zdO76xH9Or/ryNMcT+MtpEq2mPtYnev/XiN+m01nJynG4eljc2xwcq6pF7GJ916HteHQUSigIrQqrnfqtxFf8XeehnvYCeEEqOp0GCGvLpEwqWpkDhSsbsC81I4TvRg02YPAp0izc91k+as1eL/JTq1CJ1fZhnR9RuJG6hYJr4kHH6ROzclPeNiDfvMbF5XMB6l5p3xDPP4Qupf94g6M+F/hyKlH220b3GQLIaIxUB+OhmafI/vUFWGm3MXVXynPZLyan7fvJDHNKCi2e6ZKTDqjZg250Q3HQSY6T75SyX3qBA22beBYSIxqU9paPilFJc8r79Bjf2KHVRASHrZEmz5iCX7y57TU7dehoxKMNFAsnC0u7dvYYp3/tYXTfmuCJzx53JLeHtpLtqbbnD9tV5DiXzlGIPxrS6SvBNPiB2EH1YWzhU2XfqJ42zLt7suuwfqhQj0PrmlhohLHmAsVWXNyUg3EGkVQrZkzrDLVNEeud/Otj6epgD7NxTy7drtLGelKhFi8AdEIRhA0HxGpgUpyC59CUvCu1B55g2LDHTnxk2ZKD+7MMF9gO16mkMnHJANSnvPT6PxQvx1TuBkZO5bYLVDtz7hPXUKtE9xKykD+3f/pV5Jy/JTSXiMrG/sJQ0vmswrYpjvHrRnkQ1bA4lFW060M=
+  app: who-you-know-fe
+  skip_cleanup: true
