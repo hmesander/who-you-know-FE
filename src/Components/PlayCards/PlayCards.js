@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import mockData from '../../helpers/mockData.js';
 import { retrieveCardsToPlay } from '../../helpers/apiCalls.js';
 import GameBoard from '../GameBoard/GameBoard.js';
+import PropTypes from 'prop-types';
 
 export default class PlayCards extends Component {
   constructor() {
@@ -31,10 +32,16 @@ export default class PlayCards extends Component {
   }
 
   render() {
-    if (!this.state.difficulty) {
+    if (!this.props.userId) {
       return (
         <div>
-          <button className='easy-button'onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
+          You must be logged in to Play!
+        </div>
+      );
+    } else if (!this.state.difficulty) {
+      return (
+        <div>
+          <button className='easy-button' onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
           <button className='medium-button' onClick={(event) => this.setDifficulty(event)} value='medium'>Medium</button>
           <button className='hard-button' onClick={(event) => this.setDifficulty(event)} value='hard'>Hard</button>
         </div>
@@ -48,3 +55,7 @@ export default class PlayCards extends Component {
     } 
   }
 }
+
+PlayCards.propTypes = {
+  userId: PropTypes.number
+};

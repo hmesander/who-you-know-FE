@@ -47,11 +47,19 @@ export default class Sort extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote} handlePlay={this.props.handlePlay}/>
-      </div>
-    );
+    if (this.props.userId) {
+      return (
+        <div>
+          <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote} handlePlay={this.props.handlePlay} />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          You must be logged in to Sort!
+        </div>
+      );
+    }
   }
 }
 

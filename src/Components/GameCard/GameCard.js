@@ -34,7 +34,9 @@ const GameCard = (props) => {
         <h3>Results:</h3>
         <p>Correct: {props.correct}</p>
         <p>Incorrect: {props.incorrect}</p>
-        <button className='get-deck-button'onClick={() => props.getDeck()}>Get Deck</button>
+        <p>Percentage: {props.incorrect / 4 * 100}</p>
+        <button className='review-button'onClick={() => props.reviewIncorrect()}>Redo Incorrect</button>
+        <button className='get-deck-button'onClick={() => props.getDeck()}>Get New Deck</button>
       </div>
     );
   } else {

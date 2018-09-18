@@ -49,5 +49,6 @@ Card.propTypes = {
   cardsToSort: PropTypes.array,
   handleDownVote: PropTypes.func,
   handleMiddleVote: PropTypes.func,
+  handlePlay: PropTypes.func,
   handleUpVote: PropTypes.func
 };

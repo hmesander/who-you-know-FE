@@ -39,14 +39,15 @@ export class App extends Component {
     } 
   }
 
-  handleLogin = async () => {
-    await auth.login();
+  handleLogin = () => {
+    auth.login();
   }
 
   handleLogout = () => {
-    // auth.logout();
+    auth.logout();
     this.setState({
-      hash: ''
+      hash: '', 
+      userId: ''
     });
     this.props.history.push('/');
   }
@@ -64,14 +65,13 @@ export class App extends Component {
     if (splitUrl.length > 1) {
       let accessToken = splitUrl[1].split('&expires_in=')[0];
       let idToken = splitUrl[1].split('&id_token=')[1];
-      console.log(idToken);
       return { idToken, accessToken };
     }
   }
 
   render() {
     let display;
-    if (this.state.hash !== '') {
+    if (this.state.hash !== '' || this.state.userId) {
       display = 
       <button
         className="buttons logout-button"
@@ -95,9 +95,12 @@ export class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Who
-          you
+          <div className='title-container'>
+            <h1 className="App-title">Who 
+              <span className='logo'>you</span> 
           know.</h1>
+          </div>
+          
           {display}
         </header>
         <Route path='/callback' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />

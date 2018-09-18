@@ -101,10 +101,20 @@ export default class GameBoard extends Component {
     });
   }
 
+  reviewIncorrect = () => {
+    const incorrectAnswers = this.state.sorted.filter(answer => answer.answer === 'incorrect');
+    this.setState({
+      cards: incorrectAnswers,
+      sorted: [],
+      correct: 0,
+      incorrect: 0
+    });
+  }
+
   render() {
     return (
       <div>
-        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard} gameOver={this.state.gameOver} correct={this.state.correct} incorrect={this.state.incorrect}/>
+        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard} gameOver={this.state.gameOver} correct={this.state.correct} incorrect={this.state.incorrect} reviewIncorrect={this.reviewIncorrect}/>
       </div>
     );
   }
