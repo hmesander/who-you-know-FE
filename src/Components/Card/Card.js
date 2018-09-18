@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css';
+import Controls from '../Controls/Controls.js';
 
 const Card = (props) => {
   
@@ -31,7 +32,7 @@ const Card = (props) => {
   } else {
     return (
       <div>
-        No cards to sort
+        <p>No cards to sort.</p>
       </div>
     );
   }

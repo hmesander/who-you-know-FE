@@ -25,6 +25,14 @@ export default class GameBoard extends Component {
   }
 
   handleSubmit = () => {
+    if (this.state.guess) {
+      this.checkGuessField();
+    } else {
+      console.log('no input');
+    } 
+  }
+
+  checkGuessField = () => {
     if (this.state.guess.toLowerCase() === this.state.cards[0].first_last_name.toLowerCase()) {
       this.increaseCounter();
       this.setState({
@@ -85,7 +93,6 @@ export default class GameBoard extends Component {
   }
 
   endRound = () => {
-    console.log('spy')
     this.setState({
       gameOver: true,
       guess: '',
