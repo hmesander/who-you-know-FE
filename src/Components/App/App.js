@@ -48,6 +48,7 @@ export class App extends Component {
     this.setState({
       hash: ''
     });
+    this.props.history.push('/');
   }
 
   handleSort = () => {
@@ -100,7 +101,7 @@ export class App extends Component {
           {display}
         </header>
         <Route path='/callback' render={() => <Controls handleSort={this.handleSort} handlePlay={this.handlePlayDeck} />} />
-        <Route exact path='/sort' render={() => <Sort userId={this.state.userId}/>} />
+        <Route exact path='/sort' render={() => <Sort userId={this.state.userId} handlePlay={this.handlePlayDeck}/>} />
         <Route exact path='/play' render={() => <PlayCards userId={this.state.userId}/>} />
       </div>
     );

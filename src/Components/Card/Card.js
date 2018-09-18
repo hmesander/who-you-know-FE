@@ -33,6 +33,11 @@ const Card = (props) => {
     return (
       <div>
         <p>No cards to sort.</p>
+        <button
+          className='play-deck-button buttons'
+          onClick={props.handlePlay}
+        >Play a Deck
+        </button>
       </div>
     );
   }

@@ -49,12 +49,13 @@ export default class Sort extends Component {
   render() {
     return (
       <div>
-        <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote}/>
+        <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote} handlePlay={this.props.handlePlay}/>
       </div>
     );
   }
 }
 
 Sort.propTypes = {
-  userId: PropTypes.number
+  userId: PropTypes.number,
+  handlePlay: PropTypes.func
 };
