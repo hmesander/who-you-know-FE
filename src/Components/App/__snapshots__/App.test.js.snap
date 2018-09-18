@@ -3,7 +3,7 @@
 exports[`APP TESTS matches the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(App)
+  Symbol(enzyme.__unrendered__): <App
     history=""
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -17,25 +17,375 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <header
+          className="App-header"
+>
+          <h1
+                    className="App-title"
+          >
+                    Who you know.
+          </h1>
+          <div
+                    className="login-container"
+          >
+                    <p
+                              className="App-intro"
+                    >
+                              To get started, please login.
+                    </p>
+                    <button
+                              className="buttons login-button"
+                              onClick={[Function]}
+                    >
+                              Login
+                    </button>
+          </div>
+</header>,
+        <Route
+          path="/callback"
+          render={[Function]}
+/>,
+        <Route
+          exact={true}
+          path="/sort"
+          render={[Function]}
+/>,
+        <Route
+          exact={true}
+          path="/play"
+          render={[Function]}
+/>,
+      ],
+      "className": "App",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="App-title"
+>
+              Who you know.
+</h1>,
+            <div
+              className="login-container"
+>
+              <p
+                            className="App-intro"
+              >
+                            To get started, please login.
+              </p>
+              <button
+                            className="buttons login-button"
+                            onClick={[Function]}
+              >
+                            Login
+              </button>
+</div>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Who you know.",
+              "className": "App-title",
+            },
+            "ref": null,
+            "rendered": "Who you know.",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p
+                  className="App-intro"
+>
+                  To get started, please login.
+</p>,
+                <button
+                  className="buttons login-button"
+                  onClick={[Function]}
+>
+                  Login
+</button>,
+              ],
+              "className": "login-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "To get started, please login.",
+                  "className": "App-intro",
+                },
+                "ref": null,
+                "rendered": "To get started, please login.",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Login",
+                  "className": "buttons login-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Login",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "path": "/callback",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/sort",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/play",
+          "render": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <header
+            className="App-header"
+>
+            <h1
+                        className="App-title"
+            >
+                        Who you know.
+            </h1>
+            <div
+                        className="login-container"
+            >
+                        <p
+                                    className="App-intro"
+                        >
+                                    To get started, please login.
+                        </p>
+                        <button
+                                    className="buttons login-button"
+                                    onClick={[Function]}
+                        >
+                                    Login
+                        </button>
+            </div>
+</header>,
+          <Route
+            path="/callback"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/sort"
+            render={[Function]}
+/>,
+          <Route
+            exact={true}
+            path="/play"
+            render={[Function]}
+/>,
+        ],
+        "className": "App",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="App-title"
+>
+                Who you know.
+</h1>,
+              <div
+                className="login-container"
+>
+                <p
+                                className="App-intro"
+                >
+                                To get started, please login.
+                </p>
+                <button
+                                className="buttons login-button"
+                                onClick={[Function]}
+                >
+                                Login
+                </button>
+</div>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Who you know.",
+                "className": "App-title",
+              },
+              "ref": null,
+              "rendered": "Who you know.",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p
+                    className="App-intro"
+>
+                    To get started, please login.
+</p>,
+                  <button
+                    className="buttons login-button"
+                    onClick={[Function]}
+>
+                    Login
+</button>,
+                ],
+                "className": "login-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "To get started, please login.",
+                    "className": "App-intro",
+                  },
+                  "ref": null,
+                  "rendered": "To get started, please login.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Login",
+                    "className": "buttons login-button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Login",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "path": "/callback",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/sort",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/play",
+            "render": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

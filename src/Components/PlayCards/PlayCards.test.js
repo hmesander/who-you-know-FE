@@ -6,10 +6,6 @@ import { shallow } from 'enzyme';
 
 describe('PLAYCARDS TESTS', () => {
   let wrapper;
-  // const mockSubmit = jest.fn();
-  // const mockNextCard = jest.fn();
-  // const mockChange = jest.fn();
-  // const mockDeck = [{ image_url: 'google.com' }];
 
   beforeEach(() => {
     wrapper = shallow(<PlayCards />);

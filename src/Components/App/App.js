@@ -9,7 +9,7 @@ import history from '../../history';
 import { postTokens } from '../../helpers/apiCalls.js';
 const auth = new Auth();
 
-class App extends Component {
+export class App extends Component {
   constructor() {
     super();
 
@@ -43,7 +43,7 @@ class App extends Component {
   }
 
   handleLogout = () => {
-    auth.logout();
+    // auth.logout();
     this.setState({
       hash: ''
     });
