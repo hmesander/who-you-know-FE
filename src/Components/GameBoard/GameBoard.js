@@ -67,10 +67,8 @@ export default class GameBoard extends Component {
         cards: newCards,
         sorted: this.state.sorted.concat(cardToSave)
       });
-      // return cardToSave;
       this.clearFields();
     } else {
-      console.log('game over')
       this.endRound();
     }
   }
@@ -87,6 +85,7 @@ export default class GameBoard extends Component {
   }
 
   endRound = () => {
+    console.log('spy')
     this.setState({
       gameOver: true,
       guess: '',
