@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CARD TESTS should match the snapshot with cards to sort 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardsToSort={
+        Array [
+            Object {
+              "first_last_name": "John Doe",
+              "job_title": "Developer",
+              "school": "CU",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-info-section"
+>
+          <img
+                    alt="Smiley face"
+                    className="circle-image"
+                    src={undefined}
+          />
+          <h3
+                    className=""
+          >
+                    John Doe
+          </h3>
+          <h6>
+                    Developer
+          </h6>
+          <h6>
+                    CU
+          </h6>
+          <hr
+                    className="card-hr"
+          />
+</div>,
+        <div
+          className="card-button-container"
+>
+          <button
+                    className="circle-buttons downvote"
+                    onClick={[Function]}
+          >
+                    No Clue
+          </button>
+          <button
+                    className="circle-buttons middlevote"
+                    onClick={[Function]}
+          >
+                    Vague Idea
+          </button>
+          <button
+                    className="circle-buttons upvote"
+                    onClick={[Function]}
+          >
+                    BFF
+          </button>
+</div>,
+      ],
+      "className": "card-component",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Smiley face"
+              className="circle-image"
+              src={undefined}
+/>,
+            <h3
+              className=""
+>
+              John Doe
+</h3>,
+            <h6>
+              Developer
+</h6>,
+            <h6>
+              CU
+</h6>,
+            <hr
+              className="card-hr"
+/>,
+          ],
+          "className": "card-info-section",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Smiley face",
+              "className": "circle-image",
+              "src": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "John Doe",
+              "className": "",
+            },
+            "ref": null,
+            "rendered": "John Doe",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Developer",
+            },
+            "ref": null,
+            "rendered": "Developer",
+            "type": "h6",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "CU",
+            },
+            "ref": null,
+            "rendered": "CU",
+            "type": "h6",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "card-hr",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="circle-buttons downvote"
+              onClick={[Function]}
+>
+              No Clue
+</button>,
+            <button
+              className="circle-buttons middlevote"
+              onClick={[Function]}
+>
+              Vague Idea
+</button>,
+            <button
+              className="circle-buttons upvote"
+              onClick={[Function]}
+>
+              BFF
+</button>,
+          ],
+          "className": "card-button-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "No Clue",
+              "className": "circle-buttons downvote",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "No Clue",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Vague Idea",
+              "className": "circle-buttons middlevote",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Vague Idea",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "BFF",
+              "className": "circle-buttons upvote",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "BFF",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-info-section"
+>
+            <img
+                        alt="Smiley face"
+                        className="circle-image"
+                        src={undefined}
+            />
+            <h3
+                        className=""
+            >
+                        John Doe
+            </h3>
+            <h6>
+                        Developer
+            </h6>
+            <h6>
+                        CU
+            </h6>
+            <hr
+                        className="card-hr"
+            />
+</div>,
+          <div
+            className="card-button-container"
+>
+            <button
+                        className="circle-buttons downvote"
+                        onClick={[Function]}
+            >
+                        No Clue
+            </button>
+            <button
+                        className="circle-buttons middlevote"
+                        onClick={[Function]}
+            >
+                        Vague Idea
+            </button>
+            <button
+                        className="circle-buttons upvote"
+                        onClick={[Function]}
+            >
+                        BFF
+            </button>
+</div>,
+        ],
+        "className": "card-component",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Smiley face"
+                className="circle-image"
+                src={undefined}
+/>,
+              <h3
+                className=""
+>
+                John Doe
+</h3>,
+              <h6>
+                Developer
+</h6>,
+              <h6>
+                CU
+</h6>,
+              <hr
+                className="card-hr"
+/>,
+            ],
+            "className": "card-info-section",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Smiley face",
+                "className": "circle-image",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "John Doe",
+                "className": "",
+              },
+              "ref": null,
+              "rendered": "John Doe",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Developer",
+              },
+              "ref": null,
+              "rendered": "Developer",
+              "type": "h6",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CU",
+              },
+              "ref": null,
+              "rendered": "CU",
+              "type": "h6",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "card-hr",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="circle-buttons downvote"
+                onClick={[Function]}
+>
+                No Clue
+</button>,
+              <button
+                className="circle-buttons middlevote"
+                onClick={[Function]}
+>
+                Vague Idea
+</button>,
+              <button
+                className="circle-buttons upvote"
+                onClick={[Function]}
+>
+                BFF
+</button>,
+            ],
+            "className": "card-button-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "No Clue",
+                "className": "circle-buttons downvote",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "No Clue",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Vague Idea",
+                "className": "circle-buttons middlevote",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Vague Idea",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "BFF",
+                "className": "circle-buttons upvote",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "BFF",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`CARD TESTS should match the snapshot without cards to sort 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    cardsToSort={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "No cards to sort",
+    },
+    "ref": null,
+    "rendered": "No cards to sort",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "No cards to sort",
+      },
+      "ref": null,
+      "rendered": "No cards to sort",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

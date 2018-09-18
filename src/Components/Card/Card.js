@@ -15,15 +15,15 @@ const Card = (props) => {
         </div>
         <div className='card-button-container'>
           <button 
-            className='circle-buttons'
-            onClick={() => { props.handleUpVote() }}
+            className='circle-buttons downvote'
+            onClick={() => { props.handleDownVote() }}
           >No Clue</button>
           <button 
-            className='circle-buttons'
+            className='circle-buttons middlevote'
             onClick={() => { props.handleMiddleVote() }}
           >Vague Idea</button>
           <button 
-            className='circle-buttons' 
+            className='circle-buttons upvote' 
             onClick={() => { props.handleUpVote() }}>BFF</button>
         </div>
       </div>
