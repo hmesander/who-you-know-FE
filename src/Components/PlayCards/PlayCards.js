@@ -31,18 +31,13 @@ export default class PlayCards extends Component {
     return results;
   }
 
-  showGuessField = () => {
-    let display = <div>Form</div>;
-    return display;
-  }
-
   render() {
     if (!this.state.difficulty) {
       return (
         <div>
-          <button onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
-          <button onClick={(event) => this.setDifficulty(event)} value='medium'>Medium</button>
-          <button onClick={(event) => this.setDifficulty(event)} value='hard'>Hard</button>
+          <button className='easy-button'onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
+          <button className='medium-button' onClick={(event) => this.setDifficulty(event)} value='medium'>Medium</button>
+          <button className='hard-button' onClick={(event) => this.setDifficulty(event)} value='hard'>Hard</button>
         </div>
       );
     } else {
