@@ -111,5 +111,5 @@ export default class GameBoard extends Component {
 }
 
 GameBoard.propTypes = {
-  cardsToPlay: PropTypes.func
+  cardsToPlay: PropTypes.array
 };

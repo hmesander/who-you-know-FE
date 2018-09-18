@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from '../Card/Card.js';
 import mockData from '../../helpers/mockData';
 import { getConnectionsForUser, updateDifficultyLevel } from '../../helpers/apiCalls.js';
+import PropTypes from 'prop-types';
 
 export default class Sort extends Component {
   constructor() {
@@ -15,15 +16,9 @@ export default class Sort extends Component {
   async componentDidMount() {
     const cards = await getConnectionsForUser(this.props.userId);
     this.setState({
-      cards
+      cards: mockData
     });
   }
-
-  // fetchCardsToSort = () => {
-  //   console.log('fetch sort');
-  //   fetch call to retrieve cards to sort, save to variable and return them
-  //   return mockData;
-  // }
 
   getNewCard = () => {
     if (this.state.cards.length) {
@@ -59,3 +54,7 @@ export default class Sort extends Component {
     );
   }
 }
+
+Sort.propTypes = {
+  userId: PropTypes.number
+};

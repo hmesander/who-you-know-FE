@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GameCard = (props) => {
   if (props.gameDeck && props.gameDeck.length) {
     return (
       <div className='game-card-component'>
         <div className='game-card-info-container'>
-          <img src={props.gameDeck[0].image_url} alt="Profile Picture" className="circle-image"></img>
+          <img src={props.gameDeck[0].image_url} alt='Profile Picture' className='circle-image'></img>
           <hr className='card-hr'></hr>
         </div>
         <div className='guessfield-container'>
-          <label htmlFor="user-guess">Name This Connection:</label>
+          <label htmlFor='user-guess'>Name This Connection:</label>
           <input
             id='user-guess'
             className='guess-field input-fields'
@@ -46,3 +47,16 @@ const GameCard = (props) => {
 };
 
 export default GameCard;
+
+GameCard.propTypes = {
+  gameDeck: PropTypes.array,
+  getDeck: PropTypes.func,
+  handleChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  getNextCard: PropTypes.func,
+  guess: PropTypes.string,
+  gameOver: PropTypes.bool,
+  feedback: PropTypes.string,
+  correct: PropTypes.number,
+  incorrect: PropTypes.number
+};

@@ -63,6 +63,7 @@ export class App extends Component {
     if (splitUrl.length > 1) {
       let accessToken = splitUrl[1].split('&expires_in=')[0];
       let idToken = splitUrl[1].split('&id_token=')[1];
+      console.log(idToken);
       return { idToken, accessToken };
     }
   }
@@ -109,5 +110,5 @@ export class App extends Component {
 export default withRouter(App);
 
 App.propTypes = {
-  history: PropTypes.object
+  history: PropTypes.string
 };

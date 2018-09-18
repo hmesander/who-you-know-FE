@@ -1,4 +1,3 @@
-import { apiKey } from './keys.js';
 
 // export const authorizeUser = async () => {
 //   const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';

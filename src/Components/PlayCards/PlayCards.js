@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Card from '../Card/Card.js';
 import mockData from '../../helpers/mockData.js';
 import { retrieveCardsToPlay } from '../../helpers/apiCalls.js';
 import GameBoard from '../GameBoard/GameBoard.js';
