@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GameCard from '../GameCard/GameCard.js';
 
 export default class GameBoard extends Component {
   constructor() {
@@ -7,6 +8,7 @@ export default class GameBoard extends Component {
     this.state = {
       guess: '',
       sorted: [],
+      cards: [],
       correct: 0,
       incorrect: 0,
       feedback: ''
@@ -32,58 +34,37 @@ export default class GameBoard extends Component {
     }
   }
 
+  getDeck = () => {
+    this.setState({
+      cards: this.props.cardsToPlay
+    });
+  }
+
   getNextCard = () => {
     if (this.state.cards.length) {
-      const newCards = [...this.state.cards];
+      let newCards = [...this.state.cards];
       let cardToSave = newCards.shift();
       this.setState({
-        cards: newCards
+        cards: newCards,
+        sorted: [this.state.sorted, ...cardToSave]
       });
-      return cardToSave;
+      // return cardToSave;
     }
+    this.clearFields();
+  }
+
+  clearFields = () => {
+    this.setState({
+      guess: '',
+      feedback: ''
+    });
   }
 
   render() {
-    if (this.props.cardsToPlay && this.props.cardsToPlay.length) {
-      return (
-        <div className='card-component'>
-          <div className='card-info-section'>
-            <img src={this.props.cardsToPlay[0].image_url} alt="Smiley face" className='circle-image'></img>
-            <hr className='card-hr'></hr>
-          </div>
-          <div className='guessfield-container'>
-            <label htmlFor="user-guess">Name This Connection:</label>
-            <input
-              id='user-guess'
-              className='guess-field input-fields'
-              aria-label='Please Enter Your Guess'
-              type='text'
-              name='guess'
-              value={this.state.guess}
-              onChange={this.handleChange}
-            />
-            <button className='submit-guess-button' onClick={() => this.handleSubmit()}>Submit Guess</button>
-          </div>
-          <div className='feedback-container'>
-            <p>{this.state.feedback}</p>
-            {this.state.feedback ? <button onClick={() => this.getNextCard()}>Next Card</button> : null}
-          </div>
-          <div className='card-button-container'>
-            <button
-              className='circle-buttons'
-            >No</button>
-            <button
-              className='circle-buttons'
-            >Yes</button>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-        </div>
-      );
-    }
-
+    return (
+      <div>
+        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard}/>
+      </div>
+    );
   }
 }
