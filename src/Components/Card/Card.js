@@ -1,6 +1,6 @@
 import React from 'react';
 import './Card.css';
-import Controls from '../Controls/Controls.js';
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   
@@ -17,15 +17,15 @@ const Card = (props) => {
         <div className='card-button-container'>
           <button 
             className='circle-buttons downvote'
-            onClick={() => { props.handleDownVote() }}
+            onClick={() => props.handleDownVote()}
           >No Clue</button>
           <button 
             className='circle-buttons middlevote'
-            onClick={() => { props.handleMiddleVote() }}
+            onClick={() => props.handleMiddleVote()}
           >Vague Idea</button>
           <button 
             className='circle-buttons upvote' 
-            onClick={() => { props.handleUpVote() }}>BFF</button>
+            onClick={() => props.handleUpVote()}>BFF</button>
         </div>
       </div>
     );
@@ -36,8 +36,13 @@ const Card = (props) => {
       </div>
     );
   }
-
- 
 };
 
 export default Card;
+
+Card.propTypes = {
+  cardsToSort: PropTypes.array,
+  handleDownVote: PropTypes.func,
+  handleMiddleVote: PropTypes.func,
+  handleUpVote: PropTypes.func
+};
