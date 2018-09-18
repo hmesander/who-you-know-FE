@@ -12,7 +12,8 @@ export default class GameBoard extends Component {
       correct: 0,
       incorrect: 0,
       feedback: '',
-      answer: ''
+      answer: '',
+      gameOver: false
     };
   }
 
@@ -61,18 +62,33 @@ export default class GameBoard extends Component {
     if (this.state.cards.length) {
       let newCards = [...this.state.cards];
       let cardToSave = newCards.shift();
-      cardToSave.answer = this.state.answer
+      cardToSave.answer = this.state.answer;
       this.setState({
         cards: newCards,
         sorted: this.state.sorted.concat(cardToSave)
       });
       // return cardToSave;
+      this.clearFields();
+    } else {
+      console.log('game over')
+      this.endRound();
     }
-    this.clearFields();
   }
 
   clearFields = () => {
+    if (this.state.cards.length - 1) {
+      this.setState({
+        guess: '',
+        feedback: ''
+      });
+    } else {
+      this.endRound();
+    }
+  }
+
+  endRound = () => {
     this.setState({
+      gameOver: true,
       guess: '',
       feedback: ''
     });
@@ -81,7 +97,7 @@ export default class GameBoard extends Component {
   render() {
     return (
       <div>
-        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard}/>
+        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard} gameOver={this.state.gameOver} correct={this.state.correct} incorrect={this.state.incorrect}/>
       </div>
     );
   }

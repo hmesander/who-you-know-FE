@@ -27,6 +27,15 @@ const GameCard = (props) => {
         </div>
       </div>
     );
+  } else if (props.gameOver) {
+    return (
+      <div>
+        <h3>Results:</h3>
+        <p>Correct: {props.correct}</p>
+        <p>Incorrect: {props.incorrect}</p>
+        <button onClick={() => props.getDeck()}>Get Deck</button>
+      </div>
+    );
   } else {
     return (
       <div>
