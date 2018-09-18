@@ -11,7 +11,8 @@ export default class GameBoard extends Component {
       cards: [],
       correct: 0,
       incorrect: 0,
-      feedback: ''
+      feedback: '',
+      answer: ''
     };
   }
 
@@ -23,15 +24,31 @@ export default class GameBoard extends Component {
   }
 
   handleSubmit = () => {
-    if (this.state.guess.toLowerCase() === this.props.cardsToPlay[0].first_last_name.toLowerCase()) {
+    if (this.state.guess.toLowerCase() === this.state.cards[0].first_last_name.toLowerCase()) {
+      this.increaseCounter();
       this.setState({
-        feedback: 'Correct!'
+        feedback: 'Correct!',
+        answer: 'correct'
       });
     } else {
+      this.decreaseCounter();
       this.setState({
-        feedback: 'Incorrect!'
+        feedback: 'Incorrect!',
+        answer: 'incorrect'
       });
     }
+  }
+
+  increaseCounter = () => {
+    this.setState({
+      correct: this.state.correct + 1
+    });
+  }
+
+  decreaseCounter = () => {
+    this.setState({
+      incorrect: this.state.incorrect + 1
+    });
   }
 
   getDeck = () => {
@@ -44,9 +61,10 @@ export default class GameBoard extends Component {
     if (this.state.cards.length) {
       let newCards = [...this.state.cards];
       let cardToSave = newCards.shift();
+      cardToSave.answer = this.state.answer
       this.setState({
         cards: newCards,
-        sorted: [this.state.sorted, ...cardToSave]
+        sorted: this.state.sorted.concat(cardToSave)
       });
       // return cardToSave;
     }
