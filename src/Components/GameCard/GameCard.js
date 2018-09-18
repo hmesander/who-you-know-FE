@@ -23,7 +23,7 @@ const GameCard = (props) => {
         </div>
         <div className='feedback-container'>
           <p>{props.feedback}</p>
-          {props.feedback ? <button onClick={() => props.getNextCard()}>Next Card</button> : null}
+          {props.feedback ? <button className='next-card-button' onClick={() => props.getNextCard()}>Next Card</button> : null}
         </div>
       </div>
     );
@@ -33,13 +33,13 @@ const GameCard = (props) => {
         <h3>Results:</h3>
         <p>Correct: {props.correct}</p>
         <p>Incorrect: {props.incorrect}</p>
-        <button onClick={() => props.getDeck()}>Get Deck</button>
+        <button className='get-deck-button'onClick={() => props.getDeck()}>Get Deck</button>
       </div>
     );
   } else {
     return (
       <div>
-        <button onClick={() => props.getDeck()}>Get Deck</button>
+        <button className='new-deck-button' onClick={() => props.getDeck()}>Get Deck</button>
       </div>
     );
   }
