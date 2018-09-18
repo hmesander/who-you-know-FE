@@ -1,3 +1,5 @@
+/*eslint-disable no-undef camelcase*/
+
 import React from 'react';
 import GameCard from './GameCard';
 import { shallow } from 'enzyme';
@@ -6,14 +8,22 @@ describe('GAMECARD TESTS', () => {
   let wrapper;
   const mockSubmit = jest.fn();
   const mockNextCard = jest.fn();
+  const mockChange = jest.fn();
   const mockDeck = [{ image_url: 'google.com' }];
 
   beforeEach(() => {
-    wrapper = shallow(<GameCard handleSubmit={mockSubmit} getNextCard={mockNextCard}gameDeck={mockDeck}/>);
+    wrapper = shallow(<GameCard handleSubmit={mockSubmit} getNextCard={mockNextCard}gameDeck={mockDeck} handleChange={mockChange}/>);
   });
 
   it('should match the snapshot when there is a gamedeck to play', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call handle change when the user types in the input field', () => {
+    const mockEvent = { target: { value: 'something' } };
+    wrapper.find('.guess-field').simulate('change', mockEvent);
+
+    expect(mockChange).toHaveBeenCalled();
   });
 
   it('should call handleSubmit when submit guess button is clicked', () => {
