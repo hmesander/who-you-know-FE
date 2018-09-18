@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { shallow } from 'enzyme';
+import { App } from './App';
+import { MemoryRouter } from 'react-router';
+import { shallow, mount } from 'enzyme';
 
 
 describe('APP TESTS', () => {
@@ -11,17 +12,17 @@ describe('APP TESTS', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('displays a login button if the user is not logged in', () => {
+  it('should display a login button if the user is not logged in', () => {
     const wrapper = shallow(<App history={''}/>, { disableLifecycleMethods: true });
     
-    expect(wrapper.find('.login').length).toEqual(1);
+    expect(wrapper.find('.login-button').length).toEqual(1);
   });
 
-  it('displays a logout button if the user is logged in', () => {
-    const wrapper = shallow(<App/>, { disableLifecycleMethods: true });
+  it('should display a logout button if the user is logged in', () => {
+    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
     wrapper.instance().setState({hash: 'taco'});
     
-    expect(wrapper.find('.logout').length).toEqual(1);
+    expect(wrapper.find('.logout-button').length).toEqual(1);
   });
 
   it('calls the login function when a user clicks the login button', () => {
@@ -29,23 +30,33 @@ describe('APP TESTS', () => {
     const spy = spyOn(wrapper.instance(), 'handleLogin');
     wrapper.instance().forceUpdate();
 
-    wrapper.find('.login').simulate('click');
+    wrapper.find('.login-button').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });
 
-  it('calls the logout function when a user clicks the logout button', () => {
+  it('should call the logout function when a user clicks the logout button', () => {
     const wrapper = shallow(<App />, { disableLifecycleMethods: true });
     wrapper.instance().setState({ hash: 'taco' });
     const spy = spyOn(wrapper.instance(), 'handleLogout');
     wrapper.instance().forceUpdate();
 
-    wrapper.find('.logout').simulate('click');
+    wrapper.find('.logout-button').simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });
 
-  it('parses a url and returns an object with the tokens when parseUrl is called', () => {
+  it('should reset hash in state to an empty string when handleLogout is called', () => {
+    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
+    wrapper.instance().setState({
+      hash: 'taco'
+    });
+    wrapper.instance().handleLogout();
+
+    expect(wrapper.instance().state.hash).toEqual('');
+  });
+
+  it('should parse a url and returns an object with the tokens when parseUrl is called', () => {
     const wrapper = shallow(<App />, { disableLifecycleMethods: true });
     const mockUnparsedURL = '#access_token=taco&expires_in=7200&token_type=Bearer&state=cheeseburgers&id_token=123456789';
     wrapper.setState({hash: mockUnparsedURL});
@@ -53,6 +64,27 @@ describe('APP TESTS', () => {
 
     expect(results.accessToken).toEqual('taco');
     expect(results.idToken).toEqual('123456789');
-
   });
+
+  it('should push the history object to sort when handleSort is called', () => {
+    const wrapper = shallow(<App history={[]} />, { disableLifecycleMethods: true });
+    wrapper.instance().handleSort();
+    expect(wrapper.instance().props.history).toEqual(['/sort']);
+  });
+
+  it('should push the history object to play when handlePlayDeck is called', () => {
+    const wrapper = shallow(<App history={[]} />, { disableLifecycleMethods: true });
+    wrapper.instance().handlePlayDeck();
+    expect(wrapper.instance().props.history).toEqual(['/play']);
+  });
+
+  // it('should render sort component when path is /sort', () => {
+  //   const wrapper = shallow(
+  //     <MemoryRouter initialEntries={['/sort']}>
+  //       <App />
+  //     </MemoryRouter>
+  //   );
+  //   expect(wrapper.find('.PlayCards')).toHaveLength(0);
+  //   expect(wrapper.find('.Sort')).toHaveLength(1);
+  // });
 });
