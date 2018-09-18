@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard/GameCard.js';
+import PropTypes from 'prop-types';
 
 export default class GameBoard extends Component {
   constructor() {
