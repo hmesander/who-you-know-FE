@@ -1,8 +1,8 @@
+/*eslint-disable no-undef*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { App } from './App';
-import { MemoryRouter } from 'react-router';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 
 describe('APP TESTS', () => {
@@ -47,13 +47,23 @@ describe('APP TESTS', () => {
   });
 
   it('should reset hash in state to an empty string when handleLogout is called', () => {
-    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
+    const wrapper = shallow(<App history={[]}/>, { disableLifecycleMethods: true });
     wrapper.instance().setState({
       hash: 'taco'
     });
     wrapper.instance().handleLogout();
 
     expect(wrapper.instance().state.hash).toEqual('');
+  });
+
+  it('should push the history object to sort when handleLogout is called', () => {
+    const wrapper = shallow(<App history={[]} />, { disableLifecycleMethods: true });
+    wrapper.instance().setState({
+      hash: 'taco'
+    });
+    wrapper.instance().handleLogout();
+
+    expect(wrapper.instance().props.history).toEqual(['/']);
   });
 
   it('should parse a url and returns an object with the tokens when parseUrl is called', () => {
@@ -77,14 +87,4 @@ describe('APP TESTS', () => {
     wrapper.instance().handlePlayDeck();
     expect(wrapper.instance().props.history).toEqual(['/play']);
   });
-
-  // it('should render sort component when path is /sort', () => {
-  //   const wrapper = shallow(
-  //     <MemoryRouter initialEntries={['/sort']}>
-  //       <App />
-  //     </MemoryRouter>
-  //   );
-  //   expect(wrapper.find('.PlayCards')).toHaveLength(0);
-  //   expect(wrapper.find('.Sort')).toHaveLength(1);
-  // });
 });

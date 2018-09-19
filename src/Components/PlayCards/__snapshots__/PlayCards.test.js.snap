@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PLAYCARDS TESTS should match the snapshot when there is a gamedeck to play 1`] = `
+exports[`PLAYCARDS TESTS should match the snapshot when there is no username 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <PlayCards />,

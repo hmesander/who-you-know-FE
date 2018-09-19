@@ -7,7 +7,7 @@ const GameCard = (props) => {
     return (
       <div className='game-card-component'>
         <div className='game-card-info-container'>
-          <img src={props.gameDeck[0].image_url} alt='Profile Picture' className='circle-image game-image'></img>
+          <img src={props.gameDeck[0].image_url} alt='Profile' className='circle-image game-image'></img>
           <hr className='card-hr'></hr>
         </div>
         <div className='guessfield-container'>
@@ -32,14 +32,18 @@ const GameCard = (props) => {
       </div>
     );
   } else if (props.gameOver) {
+    let fraction = props.correct / props.total;
+    let percentage = Math.round(fraction * 100);
     return (
-      <div>
+      <div className='results-card'>
         <h3>Results:</h3>
         <p>Correct: {props.correct}</p>
         <p>Incorrect: {props.incorrect}</p>
-        <p>Percentage: {props.incorrect / 4 * 100}</p>
-        {props.incorrect ? <button className='review-button' onClick={() => props.reviewIncorrect()}>Redo Incorrect</button> : null}
-        <button className='get-deck-button'onClick={() => props.getDeck()}>Get New Deck</button>
+        <p>Percentage: {percentage}%</p>
+        <div className='scoreboard-button-container'>
+          {props.incorrect ? <button className='review-button buttons' onClick={() => props.reviewIncorrect()}>Redo Incorrect</button> : null}
+          <button className='get-deck-button buttons' onClick={() => props.getDeck()}>Get New Deck</button>
+        </div>
       </div>
     );
   } else {
@@ -59,9 +63,11 @@ GameCard.propTypes = {
   handleChange: PropTypes.func,
   handleSubmit: PropTypes.func,
   getNextCard: PropTypes.func,
+  reviewIncorrect: PropTypes.func,
   guess: PropTypes.string,
-  gameOver: PropTypes.bool,
   feedback: PropTypes.string,
+  gameOver: PropTypes.bool,
   correct: PropTypes.number,
+  total: PropTypes.number,
   incorrect: PropTypes.number
 };

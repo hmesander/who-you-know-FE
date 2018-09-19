@@ -52,26 +52,38 @@ ShallowWrapper {
           />
 </div>,
         <div
-          className="card-button-container"
+          className="card-lower-container"
 >
-          <button
-                    className="circle-buttons downvote"
-                    onClick={[Function]}
+          <p
+                    className="card-lower-text"
           >
-                    No Clue
-          </button>
-          <button
-                    className="circle-buttons middlevote"
-                    onClick={[Function]}
+                    How well do you know this connection?
+          </p>
+          <div
+                    className="card-button-container"
           >
-                    Vague Idea
-          </button>
-          <button
-                    className="circle-buttons upvote"
-                    onClick={[Function]}
-          >
-                    BFF
-          </button>
+                    <button
+                              className="circle-buttons downvote"
+                              onClick={[Function]}
+                              value="hard"
+                    >
+                              Who?
+                    </button>
+                    <button
+                              className="circle-buttons middlevote"
+                              onClick={[Function]}
+                              value="medium"
+                    >
+                              Vaguely
+                    </button>
+                    <button
+                              className="circle-buttons upvote"
+                              onClick={[Function]}
+                              value="easy"
+                    >
+                              BFF
+                    </button>
+          </div>
 </div>,
       ],
       "className": "card-component",
@@ -175,26 +187,38 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <button
-              className="circle-buttons downvote"
-              onClick={[Function]}
+            <p
+              className="card-lower-text"
 >
-              No Clue
-</button>,
-            <button
-              className="circle-buttons middlevote"
-              onClick={[Function]}
+              How well do you know this connection?
+</p>,
+            <div
+              className="card-button-container"
 >
-              Vague Idea
-</button>,
-            <button
-              className="circle-buttons upvote"
-              onClick={[Function]}
->
-              BFF
-</button>,
+              <button
+                            className="circle-buttons downvote"
+                            onClick={[Function]}
+                            value="hard"
+              >
+                            Who?
+              </button>
+              <button
+                            className="circle-buttons middlevote"
+                            onClick={[Function]}
+                            value="medium"
+              >
+                            Vaguely
+              </button>
+              <button
+                            className="circle-buttons upvote"
+                            onClick={[Function]}
+                            value="easy"
+              >
+                            BFF
+              </button>
+</div>,
           ],
-          "className": "card-button-container",
+          "className": "card-lower-container",
         },
         "ref": null,
         "rendered": Array [
@@ -203,39 +227,89 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "No Clue",
-              "className": "circle-buttons downvote",
-              "onClick": [Function],
+              "children": "How well do you know this connection?",
+              "className": "card-lower-text",
             },
             "ref": null,
-            "rendered": "No Clue",
-            "type": "button",
+            "rendered": "How well do you know this connection?",
+            "type": "p",
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Vague Idea",
-              "className": "circle-buttons middlevote",
-              "onClick": [Function],
+              "children": Array [
+                <button
+                  className="circle-buttons downvote"
+                  onClick={[Function]}
+                  value="hard"
+>
+                  Who?
+</button>,
+                <button
+                  className="circle-buttons middlevote"
+                  onClick={[Function]}
+                  value="medium"
+>
+                  Vaguely
+</button>,
+                <button
+                  className="circle-buttons upvote"
+                  onClick={[Function]}
+                  value="easy"
+>
+                  BFF
+</button>,
+              ],
+              "className": "card-button-container",
             },
             "ref": null,
-            "rendered": "Vague Idea",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "BFF",
-              "className": "circle-buttons upvote",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "BFF",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Who?",
+                  "className": "circle-buttons downvote",
+                  "onClick": [Function],
+                  "value": "hard",
+                },
+                "ref": null,
+                "rendered": "Who?",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Vaguely",
+                  "className": "circle-buttons middlevote",
+                  "onClick": [Function],
+                  "value": "medium",
+                },
+                "ref": null,
+                "rendered": "Vaguely",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "BFF",
+                  "className": "circle-buttons upvote",
+                  "onClick": [Function],
+                  "value": "easy",
+                },
+                "ref": null,
+                "rendered": "BFF",
+                "type": "button",
+              },
+            ],
+            "type": "div",
           },
         ],
         "type": "div",
@@ -274,26 +348,38 @@ ShallowWrapper {
             />
 </div>,
           <div
-            className="card-button-container"
+            className="card-lower-container"
 >
-            <button
-                        className="circle-buttons downvote"
-                        onClick={[Function]}
+            <p
+                        className="card-lower-text"
             >
-                        No Clue
-            </button>
-            <button
-                        className="circle-buttons middlevote"
-                        onClick={[Function]}
+                        How well do you know this connection?
+            </p>
+            <div
+                        className="card-button-container"
             >
-                        Vague Idea
-            </button>
-            <button
-                        className="circle-buttons upvote"
-                        onClick={[Function]}
-            >
-                        BFF
-            </button>
+                        <button
+                                    className="circle-buttons downvote"
+                                    onClick={[Function]}
+                                    value="hard"
+                        >
+                                    Who?
+                        </button>
+                        <button
+                                    className="circle-buttons middlevote"
+                                    onClick={[Function]}
+                                    value="medium"
+                        >
+                                    Vaguely
+                        </button>
+                        <button
+                                    className="circle-buttons upvote"
+                                    onClick={[Function]}
+                                    value="easy"
+                        >
+                                    BFF
+                        </button>
+            </div>
 </div>,
         ],
         "className": "card-component",
@@ -397,26 +483,38 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <button
-                className="circle-buttons downvote"
-                onClick={[Function]}
+              <p
+                className="card-lower-text"
 >
-                No Clue
-</button>,
-              <button
-                className="circle-buttons middlevote"
-                onClick={[Function]}
+                How well do you know this connection?
+</p>,
+              <div
+                className="card-button-container"
 >
-                Vague Idea
-</button>,
-              <button
-                className="circle-buttons upvote"
-                onClick={[Function]}
->
-                BFF
-</button>,
+                <button
+                                className="circle-buttons downvote"
+                                onClick={[Function]}
+                                value="hard"
+                >
+                                Who?
+                </button>
+                <button
+                                className="circle-buttons middlevote"
+                                onClick={[Function]}
+                                value="medium"
+                >
+                                Vaguely
+                </button>
+                <button
+                                className="circle-buttons upvote"
+                                onClick={[Function]}
+                                value="easy"
+                >
+                                BFF
+                </button>
+</div>,
             ],
-            "className": "card-button-container",
+            "className": "card-lower-container",
           },
           "ref": null,
           "rendered": Array [
@@ -425,39 +523,89 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "No Clue",
-                "className": "circle-buttons downvote",
-                "onClick": [Function],
+                "children": "How well do you know this connection?",
+                "className": "card-lower-text",
               },
               "ref": null,
-              "rendered": "No Clue",
-              "type": "button",
+              "rendered": "How well do you know this connection?",
+              "type": "p",
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Vague Idea",
-                "className": "circle-buttons middlevote",
-                "onClick": [Function],
+                "children": Array [
+                  <button
+                    className="circle-buttons downvote"
+                    onClick={[Function]}
+                    value="hard"
+>
+                    Who?
+</button>,
+                  <button
+                    className="circle-buttons middlevote"
+                    onClick={[Function]}
+                    value="medium"
+>
+                    Vaguely
+</button>,
+                  <button
+                    className="circle-buttons upvote"
+                    onClick={[Function]}
+                    value="easy"
+>
+                    BFF
+</button>,
+                ],
+                "className": "card-button-container",
               },
               "ref": null,
-              "rendered": "Vague Idea",
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "BFF",
-                "className": "circle-buttons upvote",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "BFF",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Who?",
+                    "className": "circle-buttons downvote",
+                    "onClick": [Function],
+                    "value": "hard",
+                  },
+                  "ref": null,
+                  "rendered": "Who?",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Vaguely",
+                    "className": "circle-buttons middlevote",
+                    "onClick": [Function],
+                    "value": "medium",
+                  },
+                  "ref": null,
+                  "rendered": "Vaguely",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "BFF",
+                    "className": "circle-buttons upvote",
+                    "onClick": [Function],
+                    "value": "easy",
+                  },
+                  "ref": null,
+                  "rendered": "BFF",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
             },
           ],
           "type": "div",

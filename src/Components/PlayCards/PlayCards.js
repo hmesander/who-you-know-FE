@@ -25,8 +25,7 @@ export default class PlayCards extends Component {
   }
 
   fetchCardsToPlay = async (difficulty) => {
-    let results = await retrieveCardsToPlay(2, difficulty);
-    console.log(results);
+    let results = await retrieveCardsToPlay(this.props.userId, difficulty);
     this.setState({
       cards: mockData
     });
@@ -59,5 +58,5 @@ export default class PlayCards extends Component {
 }
 
 PlayCards.propTypes = {
-  userId: PropTypes.number
+  userId: PropTypes.string
 };

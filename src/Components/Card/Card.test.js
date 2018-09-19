@@ -1,8 +1,8 @@
+/*eslint-disable no-undef, camelcase*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Card from './Card';
 import { shallow } from 'enzyme';
-
 
 describe('CARD TESTS', () => {
   it('should match the snapshot with cards to sort', () => {
@@ -19,33 +19,33 @@ describe('CARD TESTS', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call handleUpVote when the upvote button is clicked', () => {
-    const mockUpVote = jest.fn();
+  it('should call handleVote when the upvote button is clicked', () => {
+    const mockVote = jest.fn();
     const mockCards = [{ first_last_name: 'John Doe', job_title: 'Developer', school: 'CU' }];
-    const wrapper = shallow(<Card cardsToSort={mockCards} handleUpVote={mockUpVote}/>);
+    const wrapper = shallow(<Card cardsToSort={mockCards} handleVote={mockVote}/>);
 
     const button = wrapper.find('.upvote');
     button.simulate('click');
-    expect(mockUpVote).toHaveBeenCalled();  
+    expect(mockVote).toHaveBeenCalled();  
   });
 
-  it('should call handleMiddleVote when the middle vote button is clicked', () => {
-    const mockMiddleVote = jest.fn();
+  it('should call handleVote when the middle vote button is clicked', () => {
+    const mockVote = jest.fn();
     const mockCards = [{ first_last_name: 'John Doe', job_title: 'Developer', school: 'CU' }];
-    const wrapper = shallow(<Card cardsToSort={mockCards} handleMiddleVote={mockMiddleVote} />);
+    const wrapper = shallow(<Card cardsToSort={mockCards} handleVote={mockVote} />);
 
     const button = wrapper.find('.middlevote');
     button.simulate('click');
-    expect(mockMiddleVote).toHaveBeenCalled();
+    expect(mockVote).toHaveBeenCalled();
   });
 
-  it('should call handleDownVote when the down vote button is clicked', () => {
-    const mockDownVote = jest.fn();
+  it('should call handleVote when the down vote button is clicked', () => {
+    const mockVote = jest.fn();
     const mockCards = [{ first_last_name: 'John Doe', job_title: 'Developer', school: 'CU' }];
-    const wrapper = shallow(<Card cardsToSort={mockCards} handleDownVote={mockDownVote} />);
+    const wrapper = shallow(<Card cardsToSort={mockCards} handleVote={mockVote} />);
 
     const button = wrapper.find('.downvote');
     button.simulate('click');
-    expect(mockDownVote).toHaveBeenCalled();
+    expect(mockVote).toHaveBeenCalled();
   });
 });

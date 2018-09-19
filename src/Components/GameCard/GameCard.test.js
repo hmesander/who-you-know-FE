@@ -1,4 +1,4 @@
-/*eslint-disable no-undef camelcase*/
+/*eslint-disable no-undef, camelcase*/
 
 import React from 'react';
 import GameCard from './GameCard';
@@ -42,14 +42,14 @@ describe('GAMECARD TESTS', () => {
   });
 
   it('should match the snapshot when the game is over', () => {
-    wrapper = shallow(<GameCard gameOver='true' />);
+    wrapper = shallow(<GameCard gameOver={true} />);
 
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should call getDeck function when get deck button is clicked', () => {
     const mockGetDeck = jest.fn();
-    wrapper = shallow(<GameCard gameOver='true' getDeck={mockGetDeck}/>);
+    wrapper = shallow(<GameCard gameOver={true} getDeck={mockGetDeck}/>);
     const button = wrapper.find('.get-deck-button');
     button.simulate('click');
 

@@ -98,7 +98,7 @@ exports[`GAMECARD TESTS should match the snapshot when the game is over 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <GameCard
-    gameOver="true"
+    gameOver={true}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -126,15 +126,20 @@ ShallowWrapper {
         <p>
           Percentage: 
           NaN
+          %
 </p>,
-        null,
-        <button
-          className="get-deck-button"
-          onClick={[Function]}
+        <div
+          className="scoreboard-button-container"
 >
-          Get New Deck
-</button>,
+          <button
+                    className="get-deck-button buttons"
+                    onClick={[Function]}
+          >
+                    Get New Deck
+          </button>
+</div>,
       ],
+      "className": "results-card",
     },
     "ref": null,
     "rendered": Array [
@@ -191,28 +196,51 @@ ShallowWrapper {
           "children": Array [
             "Percentage: ",
             NaN,
+            "%",
           ],
         },
         "ref": null,
         "rendered": Array [
           "Percentage: ",
           NaN,
+          "%",
         ],
         "type": "p",
       },
-      null,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Get New Deck",
-          "className": "get-deck-button",
-          "onClick": [Function],
+          "children": Array [
+            null,
+            <button
+              className="get-deck-button buttons"
+              onClick={[Function]}
+>
+              Get New Deck
+</button>,
+          ],
+          "className": "scoreboard-button-container",
         },
         "ref": null,
-        "rendered": "Get New Deck",
-        "type": "button",
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Get New Deck",
+              "className": "get-deck-button buttons",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Get New Deck",
+            "type": "button",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -236,15 +264,20 @@ ShallowWrapper {
           <p>
             Percentage: 
             NaN
+            %
 </p>,
-          null,
-          <button
-            className="get-deck-button"
-            onClick={[Function]}
+          <div
+            className="scoreboard-button-container"
 >
-            Get New Deck
-</button>,
+            <button
+                        className="get-deck-button buttons"
+                        onClick={[Function]}
+            >
+                        Get New Deck
+            </button>
+</div>,
         ],
+        "className": "results-card",
       },
       "ref": null,
       "rendered": Array [
@@ -301,28 +334,51 @@ ShallowWrapper {
             "children": Array [
               "Percentage: ",
               NaN,
+              "%",
             ],
           },
           "ref": null,
           "rendered": Array [
             "Percentage: ",
             NaN,
+            "%",
           ],
           "type": "p",
         },
-        null,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Get New Deck",
-            "className": "get-deck-button",
-            "onClick": [Function],
+            "children": Array [
+              null,
+              <button
+                className="get-deck-button buttons"
+                onClick={[Function]}
+>
+                Get New Deck
+</button>,
+            ],
+            "className": "scoreboard-button-container",
           },
           "ref": null,
-          "rendered": "Get New Deck",
-          "type": "button",
+          "rendered": Array [
+            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Get New Deck",
+                "className": "get-deck-button buttons",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Get New Deck",
+              "type": "button",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",
@@ -383,7 +439,7 @@ ShallowWrapper {
           className="game-card-info-container"
 >
           <img
-                    alt="Profile Picture"
+                    alt="Profile"
                     className="circle-image game-image"
                     src="google.com"
           />
@@ -436,7 +492,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
-              alt="Profile Picture"
+              alt="Profile"
               className="circle-image game-image"
               src="google.com"
 />,
@@ -453,7 +509,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Profile Picture",
+              "alt": "Profile",
               "className": "circle-image game-image",
               "src": "google.com",
             },
@@ -626,7 +682,7 @@ ShallowWrapper {
             className="game-card-info-container"
 >
             <img
-                        alt="Profile Picture"
+                        alt="Profile"
                         className="circle-image game-image"
                         src="google.com"
             />
@@ -679,7 +735,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <img
-                alt="Profile Picture"
+                alt="Profile"
                 className="circle-image game-image"
                 src="google.com"
 />,
@@ -696,7 +752,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "Profile Picture",
+                "alt": "Profile",
                 "className": "circle-image game-image",
                 "src": "google.com",
               },

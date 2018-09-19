@@ -54,3 +54,4 @@ Once the server is running, visit the app in your browser:
 * Front end is deployed here with Heroku: https://who-you-know-fe.herokuapp.com/
 
 * [Rails Backend API](https://github.com/justinetroyke/who-you-know-backend) is deployed with Heroku here: https://who-you-know.herokuapp.com/
+
