@@ -14,10 +14,12 @@ export default class Sort extends Component {
   }
 
   async componentDidMount() {
-    const cards = await getConnectionsForUser(this.props.userId);
-    this.setState({
-      cards: cards
-    });
+    if (this.props.userId) {
+      const cards = await getConnectionsForUser(this.props.userId);
+      this.setState({
+        cards: cards
+      });
+    }
   }
 
   getNewCard = () => {

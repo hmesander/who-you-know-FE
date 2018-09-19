@@ -38,7 +38,7 @@ export class App extends Component {
       });
       let results = await postTokens(this.state.accessToken, this.state.idToken);
       this.setState({
-        userId: results.id
+        userId: 2
       });
     } 
   }
