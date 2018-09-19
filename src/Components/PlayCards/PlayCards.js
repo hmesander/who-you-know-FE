@@ -3,6 +3,7 @@ import mockData from '../../helpers/mockData.js';
 import { retrieveCardsToPlay } from '../../helpers/apiCalls.js';
 import GameBoard from '../GameBoard/GameBoard.js';
 import PropTypes from 'prop-types';
+import './PlayCards.css';
 
 export default class PlayCards extends Component {
   constructor() {
@@ -24,7 +25,8 @@ export default class PlayCards extends Component {
   }
 
   fetchCardsToPlay = async (difficulty) => {
-    let results = await retrieveCardsToPlay(1, difficulty);
+    let results = await retrieveCardsToPlay(2, difficulty);
+    console.log(results);
     this.setState({
       cards: mockData
     });
@@ -34,16 +36,16 @@ export default class PlayCards extends Component {
   render() {
     if (!this.props.userId) {
       return (
-        <div>
-          You must be logged in to Play!
+        <div className='login-error-container'>
+          <h6 className='login-error-text'>You must be logged in to Play!</h6>
         </div>
       );
     } else if (!this.state.difficulty) {
       return (
-        <div>
-          <button className='easy-button' onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
-          <button className='medium-button' onClick={(event) => this.setDifficulty(event)} value='medium'>Medium</button>
-          <button className='hard-button' onClick={(event) => this.setDifficulty(event)} value='hard'>Hard</button>
+        <div className='difficulty-button-container'>
+          <button className='easy-button buttons difficulty-buttons' onClick={(event) => this.setDifficulty(event)} value='easy'>Easy</button>
+          <button className='medium-button buttons difficulty-buttons' onClick={(event) => this.setDifficulty(event)} value='medium'>Medium</button>
+          <button className='hard-button buttons difficulty-buttons' onClick={(event) => this.setDifficulty(event)} value='hard'>Hard</button>
         </div>
       );
     } else {

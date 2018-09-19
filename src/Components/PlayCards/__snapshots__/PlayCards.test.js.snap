@@ -17,75 +17,26 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <button
-          className="easy-button"
-          onClick={[Function]}
-          value="easy"
+      "children": <h6
+        className="login-error-text"
 >
-          Easy
-</button>,
-        <button
-          className="medium-button"
-          onClick={[Function]}
-          value="medium"
->
-          Medium
-</button>,
-        <button
-          className="hard-button"
-          onClick={[Function]}
-          value="hard"
->
-          Hard
-</button>,
-      ],
+        You must be logged in to Play!
+</h6>,
+      "className": "login-error-container",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Easy",
-          "className": "easy-button",
-          "onClick": [Function],
-          "value": "easy",
-        },
-        "ref": null,
-        "rendered": "Easy",
-        "type": "button",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "You must be logged in to Play!",
+        "className": "login-error-text",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Medium",
-          "className": "medium-button",
-          "onClick": [Function],
-          "value": "medium",
-        },
-        "ref": null,
-        "rendered": "Medium",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Hard",
-          "className": "hard-button",
-          "onClick": [Function],
-          "value": "hard",
-        },
-        "ref": null,
-        "rendered": "Hard",
-        "type": "button",
-      },
-    ],
+      "ref": null,
+      "rendered": "You must be logged in to Play!",
+      "type": "h6",
+    },
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -94,75 +45,26 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <button
-            className="easy-button"
-            onClick={[Function]}
-            value="easy"
+        "children": <h6
+          className="login-error-text"
 >
-            Easy
-</button>,
-          <button
-            className="medium-button"
-            onClick={[Function]}
-            value="medium"
->
-            Medium
-</button>,
-          <button
-            className="hard-button"
-            onClick={[Function]}
-            value="hard"
->
-            Hard
-</button>,
-        ],
+          You must be logged in to Play!
+</h6>,
+        "className": "login-error-container",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Easy",
-            "className": "easy-button",
-            "onClick": [Function],
-            "value": "easy",
-          },
-          "ref": null,
-          "rendered": "Easy",
-          "type": "button",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "You must be logged in to Play!",
+          "className": "login-error-text",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Medium",
-            "className": "medium-button",
-            "onClick": [Function],
-            "value": "medium",
-          },
-          "ref": null,
-          "rendered": "Medium",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Hard",
-            "className": "hard-button",
-            "onClick": [Function],
-            "value": "hard",
-          },
-          "ref": null,
-          "rendered": "Hard",
-          "type": "button",
-        },
-      ],
+        "ref": null,
+        "rendered": "You must be logged in to Play!",
+        "type": "h6",
+      },
       "type": "div",
     },
   ],

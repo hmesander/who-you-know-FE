@@ -28,8 +28,9 @@ body {
   border-radius: 2px;
   height: 50px;
   margin: 0 4px;
-  padding: 2px 0;
   letter-spacing: -1px;
+  padding: 3px;
+  text-align: center;
 }
 
 .App-intro {
@@ -44,58 +45,44 @@ body {
   align-items: center;
 }
 
-/* .buttons {
-  font-family: Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #f6e312;
-  border: 1px solid #e9ac1a;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
-  border-radius: 3px;
-  color: #333;
-  cursor: pointer;
-  box-sizing: border-box;
-  background-image: linear-gradient(to bottom, #f6e312 0%,#f9c80d 100%);
-  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
-} */
-
-/* .buttons {
+.buttons {
   background-color: #0073b1;
   border: 0;
+  border-radius: 2px;
   color: #fff;
-} */
+  cursor: pointer;
+}
 
 .buttons:hover {
   background-color: #006097;
 }
 
-/* .buttons:hover {
-  background-image: linear-gradient(to bottom, #eddb11 0%,#efcf14 35%,#f1bf18 65%,#f2b21b 100%);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
-} */
-
 .login-button, .logout-button {
   height: 24px;
   width: 100px;
-  background-color: #0073b1;
-  border: 0;
-  color: #fff;
 }
 
 .sort-cards-button, .play-deck-button {
-  height: 34px;
-  line-height: 32px;
-  width: 200px;
-  background-color: #f6e312;
-  border: 1px solid #e9ac1a;
-  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
-  border-radius: 3px;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
+  line-height: 1.2rem;
+  width: 13em;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 4px 15px;
 } 
 
-.sort-cards-button:hover, .play-deck-button:hover {
-  background-image: linear-gradient(to bottom, #eddb11 0%,#efcf14 35%,#f1bf18 65%,#f2b21b 100%);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+.controls-component {
+  width: 60%;
+  margin: 5% auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-error-container {
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.login-error-text {
+  font-size: 1em;
 }

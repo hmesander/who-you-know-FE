@@ -8,6 +8,7 @@ import Auth from '../../Auth/Auth.js';
 import history from '../../history';
 import PropTypes from 'prop-types';
 import { postTokens } from '../../helpers/apiCalls.js';
+import { idKey } from '../../helpers/keys';
 const auth = new Auth();
 
 export class App extends Component {
@@ -28,6 +29,7 @@ export class App extends Component {
         hash: history.location.hash
       });
       let { idToken, accessToken } = await this.parseURL(history.location.hash);
+      idToken = idKey;
       this.setState({
         idToken,
         accessToken

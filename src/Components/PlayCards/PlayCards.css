@@ -1,0 +1,10 @@
+.difficulty-button-container {
+  width: 80%;
+  margin: 3em auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.difficulty-buttons {
+  width: 20%;
+}

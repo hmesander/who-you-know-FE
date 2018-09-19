@@ -23,11 +23,21 @@ ShallowWrapper {
         <header
           className="App-header"
 >
-          <h1
-                    className="App-title"
+          <div
+                    className="title-container"
           >
-                    Who you know.
-          </h1>
+                    <h1
+                              className="App-title"
+                    >
+                              Who
+                              <span
+                                        className="logo"
+                              >
+                                        you
+                              </span>
+                              know.
+                    </h1>
+          </div>
           <div
                     className="login-container"
           >
@@ -69,11 +79,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h1
-              className="App-title"
+            <div
+              className="title-container"
 >
-              Who you know.
-</h1>,
+              <h1
+                            className="App-title"
+              >
+                            Who
+                            <span
+                                          className="logo"
+                            >
+                                          you
+                            </span>
+                            know.
+              </h1>
+</div>,
             <div
               className="login-container"
 >
@@ -99,12 +119,56 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Who you know.",
-              "className": "App-title",
+              "children": <h1
+                className="App-title"
+>
+                Who
+                <span
+                                className="logo"
+                >
+                                you
+                </span>
+                know.
+</h1>,
+              "className": "title-container",
             },
             "ref": null,
-            "rendered": "Who you know.",
-            "type": "h1",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Who",
+                  <span
+                    className="logo"
+>
+                    you
+</span>,
+                  "know.",
+                ],
+                "className": "App-title",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Who",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "you",
+                    "className": "logo",
+                  },
+                  "ref": null,
+                  "rendered": "you",
+                  "type": "span",
+                },
+                "know.",
+              ],
+              "type": "h1",
+            },
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -210,11 +274,21 @@ ShallowWrapper {
           <header
             className="App-header"
 >
-            <h1
-                        className="App-title"
+            <div
+                        className="title-container"
             >
-                        Who you know.
-            </h1>
+                        <h1
+                                    className="App-title"
+                        >
+                                    Who
+                                    <span
+                                                className="logo"
+                                    >
+                                                you
+                                    </span>
+                                    know.
+                        </h1>
+            </div>
             <div
                         className="login-container"
             >
@@ -256,11 +330,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h1
-                className="App-title"
+              <div
+                className="title-container"
 >
-                Who you know.
-</h1>,
+                <h1
+                                className="App-title"
+                >
+                                Who
+                                <span
+                                                className="logo"
+                                >
+                                                you
+                                </span>
+                                know.
+                </h1>
+</div>,
               <div
                 className="login-container"
 >
@@ -286,12 +370,56 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Who you know.",
-                "className": "App-title",
+                "children": <h1
+                  className="App-title"
+>
+                  Who
+                  <span
+                                    className="logo"
+                  >
+                                    you
+                  </span>
+                  know.
+</h1>,
+                "className": "title-container",
               },
               "ref": null,
-              "rendered": "Who you know.",
-              "type": "h1",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "Who",
+                    <span
+                      className="logo"
+>
+                      you
+</span>,
+                    "know.",
+                  ],
+                  "className": "App-title",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Who",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "you",
+                      "className": "logo",
+                    },
+                    "ref": null,
+                    "rendered": "you",
+                    "type": "span",
+                  },
+                  "know.",
+                ],
+                "type": "h1",
+              },
+              "type": "div",
             },
             Object {
               "instance": null,

@@ -16,7 +16,7 @@ export default class Sort extends Component {
   async componentDidMount() {
     const cards = await getConnectionsForUser(this.props.userId);
     this.setState({
-      cards: mockData
+      cards
     });
   }
 
@@ -55,8 +55,8 @@ export default class Sort extends Component {
       );
     } else {
       return (
-        <div>
-          You must be logged in to Sort!
+        <div className='login-error-container'>
+          <h6 className='login-error-text'>You must be logged in to Sort!</h6>
         </div>
       );
     }

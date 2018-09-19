@@ -32,7 +32,7 @@ ShallowWrapper {
           className="card-info-section"
 >
           <img
-                    alt="Smiley face"
+                    alt="Profile"
                     className="circle-image"
                     src={undefined}
           />
@@ -85,7 +85,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <img
-              alt="Smiley face"
+              alt="Profile"
               className="circle-image"
               src={undefined}
 />,
@@ -113,7 +113,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Smiley face",
+              "alt": "Profile",
               "className": "circle-image",
               "src": undefined,
             },
@@ -254,7 +254,7 @@ ShallowWrapper {
             className="card-info-section"
 >
             <img
-                        alt="Smiley face"
+                        alt="Profile"
                         className="circle-image"
                         src={undefined}
             />
@@ -307,7 +307,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <img
-                alt="Smiley face"
+                alt="Profile"
                 className="circle-image"
                 src={undefined}
 />,
@@ -335,7 +335,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "alt": "Smiley face",
+                "alt": "Profile",
                 "className": "circle-image",
                 "src": undefined,
               },
@@ -507,10 +507,45 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "No cards to sort",
+      "children": Array [
+        <p>
+          No cards to sort.
+</p>,
+        <button
+          className="play-deck-button buttons"
+          onClick={undefined}
+>
+          Play a Deck
+</button>,
+      ],
     },
     "ref": null,
-    "rendered": "No cards to sort",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "No cards to sort.",
+        },
+        "ref": null,
+        "rendered": "No cards to sort.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Play a Deck",
+          "className": "play-deck-button buttons",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "Play a Deck",
+        "type": "button",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -519,10 +554,45 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "No cards to sort",
+        "children": Array [
+          <p>
+            No cards to sort.
+</p>,
+          <button
+            className="play-deck-button buttons"
+            onClick={undefined}
+>
+            Play a Deck
+</button>,
+        ],
       },
       "ref": null,
-      "rendered": "No cards to sort",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "No cards to sort.",
+          },
+          "ref": null,
+          "rendered": "No cards to sort.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Play a Deck",
+            "className": "play-deck-button buttons",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "Play a Deck",
+          "type": "button",
+        },
+      ],
       "type": "div",
     },
   ],

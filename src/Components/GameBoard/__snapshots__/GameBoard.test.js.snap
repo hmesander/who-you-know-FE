@@ -28,6 +28,7 @@ ShallowWrapper {
         handleChange={[Function]}
         handleSubmit={[Function]}
         incorrect={0}
+        reviewIncorrect={[Function]}
 />,
     },
     "ref": null,
@@ -46,6 +47,7 @@ ShallowWrapper {
         "handleChange": [Function],
         "handleSubmit": [Function],
         "incorrect": 0,
+        "reviewIncorrect": [Function],
       },
       "ref": null,
       "rendered": null,
@@ -70,6 +72,7 @@ ShallowWrapper {
           handleChange={[Function]}
           handleSubmit={[Function]}
           incorrect={0}
+          reviewIncorrect={[Function]}
 />,
       },
       "ref": null,
@@ -88,6 +91,7 @@ ShallowWrapper {
           "handleChange": [Function],
           "handleSubmit": [Function],
           "incorrect": 0,
+          "reviewIncorrect": [Function],
         },
         "ref": null,
         "rendered": null,

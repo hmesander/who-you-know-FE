@@ -1,26 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './GameCard.css';
 
 const GameCard = (props) => {
   if (props.gameDeck && props.gameDeck.length) {
     return (
       <div className='game-card-component'>
         <div className='game-card-info-container'>
-          <img src={props.gameDeck[0].image_url} alt='Profile Picture' className='circle-image'></img>
+          <img src={props.gameDeck[0].image_url} alt='Profile Picture' className='circle-image game-image'></img>
           <hr className='card-hr'></hr>
         </div>
         <div className='guessfield-container'>
           <label htmlFor='user-guess'>Name This Connection:</label>
-          <input
-            id='user-guess'
-            className='guess-field input-fields'
-            aria-label='Please Enter Your Guess'
-            type='text'
-            name='guess'
-            value={props.guess}
-            onChange={(event) => props.handleChange(event)}
-          />
-          <button className='submit-guess-button' onClick={() => props.handleSubmit()}>Submit Guess</button>
+          <span className='input-holder'>
+            <input
+              id='user-guess'
+              className='guess-field input-fields'
+              aria-label='Please Enter Your Guess'
+              type='text'
+              name='guess'
+              value={props.guess}
+              onChange={(event) => props.handleChange(event)}
+            />
+            <button className='submit-guess-button buttons' onClick={() => props.handleSubmit()}>Submit Guess</button>
+          </span>
         </div>
         <div className='feedback-container'>
           <p>{props.feedback}</p>
@@ -41,8 +44,8 @@ const GameCard = (props) => {
     );
   } else {
     return (
-      <div>
-        <button className='new-deck-button' onClick={() => props.getDeck()}>Get Deck</button>
+      <div className='new-deck-container'>
+        <button className='new-deck-button buttons' onClick={() => props.getDeck()}>Get Deck</button>
       </div>
     );
   }

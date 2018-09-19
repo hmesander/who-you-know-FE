@@ -18,11 +18,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <button
-        className="new-deck-button"
+        className="new-deck-button buttons"
         onClick={[Function]}
 >
         Get Deck
 </button>,
+      "className": "new-deck-container",
     },
     "ref": null,
     "rendered": Object {
@@ -31,7 +32,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "Get Deck",
-        "className": "new-deck-button",
+        "className": "new-deck-button buttons",
         "onClick": [Function],
       },
       "ref": null,
@@ -47,11 +48,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <button
-          className="new-deck-button"
+          className="new-deck-button buttons"
           onClick={[Function]}
 >
           Get Deck
 </button>,
+        "className": "new-deck-container",
       },
       "ref": null,
       "rendered": Object {
@@ -60,7 +62,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Get Deck",
-          "className": "new-deck-button",
+          "className": "new-deck-button buttons",
           "onClick": [Function],
         },
         "ref": null,
@@ -121,11 +123,16 @@ ShallowWrapper {
         <p>
           Incorrect: 
 </p>,
+        <p>
+          Percentage: 
+          NaN
+</p>,
+        null,
         <button
           className="get-deck-button"
           onClick={[Function]}
 >
-          Get Deck
+          Get New Deck
 </button>,
       ],
     },
@@ -181,12 +188,30 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Get Deck",
+          "children": Array [
+            "Percentage: ",
+            NaN,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Percentage: ",
+          NaN,
+        ],
+        "type": "p",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Get New Deck",
           "className": "get-deck-button",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Get Deck",
+        "rendered": "Get New Deck",
         "type": "button",
       },
     ],
@@ -208,11 +233,16 @@ ShallowWrapper {
           <p>
             Incorrect: 
 </p>,
+          <p>
+            Percentage: 
+            NaN
+</p>,
+          null,
           <button
             className="get-deck-button"
             onClick={[Function]}
 >
-            Get Deck
+            Get New Deck
 </button>,
         ],
       },
@@ -268,12 +298,30 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Get Deck",
+            "children": Array [
+              "Percentage: ",
+              NaN,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Percentage: ",
+            NaN,
+          ],
+          "type": "p",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Get New Deck",
             "className": "get-deck-button",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Get Deck",
+          "rendered": "Get New Deck",
           "type": "button",
         },
       ],
@@ -336,7 +384,7 @@ ShallowWrapper {
 >
           <img
                     alt="Profile Picture"
-                    className="circle-image"
+                    className="circle-image game-image"
                     src="google.com"
           />
           <hr
@@ -351,21 +399,25 @@ ShallowWrapper {
           >
                     Name This Connection:
           </label>
-          <input
-                    aria-label="Please Enter Your Guess"
-                    className="guess-field input-fields"
-                    id="user-guess"
-                    name="guess"
-                    onChange={[Function]}
-                    type="text"
-                    value={undefined}
-          />
-          <button
-                    className="submit-guess-button"
-                    onClick={[Function]}
+          <span
+                    className="input-holder"
           >
-                    Submit Guess
-          </button>
+                    <input
+                              aria-label="Please Enter Your Guess"
+                              className="guess-field input-fields"
+                              id="user-guess"
+                              name="guess"
+                              onChange={[Function]}
+                              type="text"
+                              value={undefined}
+                    />
+                    <button
+                              className="submit-guess-button buttons"
+                              onClick={[Function]}
+                    >
+                              Submit Guess
+                    </button>
+          </span>
 </div>,
         <div
           className="feedback-container"
@@ -385,7 +437,7 @@ ShallowWrapper {
           "children": Array [
             <img
               alt="Profile Picture"
-              className="circle-image"
+              className="circle-image game-image"
               src="google.com"
 />,
             <hr
@@ -402,7 +454,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "alt": "Profile Picture",
-              "className": "circle-image",
+              "className": "circle-image game-image",
               "src": "google.com",
             },
             "ref": null,
@@ -434,21 +486,25 @@ ShallowWrapper {
 >
               Name This Connection:
 </label>,
-            <input
-              aria-label="Please Enter Your Guess"
-              className="guess-field input-fields"
-              id="user-guess"
-              name="guess"
-              onChange={[Function]}
-              type="text"
-              value={undefined}
-/>,
-            <button
-              className="submit-guess-button"
-              onClick={[Function]}
+            <span
+              className="input-holder"
 >
-              Submit Guess
-</button>,
+              <input
+                            aria-label="Please Enter Your Guess"
+                            className="guess-field input-fields"
+                            id="user-guess"
+                            name="guess"
+                            onChange={[Function]}
+                            type="text"
+                            value={undefined}
+              />
+              <button
+                            className="submit-guess-button buttons"
+                            onClick={[Function]}
+              >
+                            Submit Guess
+              </button>
+</span>,
           ],
           "className": "guessfield-container",
         },
@@ -471,30 +527,59 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "aria-label": "Please Enter Your Guess",
-              "className": "guess-field input-fields",
-              "id": "user-guess",
-              "name": "guess",
-              "onChange": [Function],
-              "type": "text",
-              "value": undefined,
+              "children": Array [
+                <input
+                  aria-label="Please Enter Your Guess"
+                  className="guess-field input-fields"
+                  id="user-guess"
+                  name="guess"
+                  onChange={[Function]}
+                  type="text"
+                  value={undefined}
+/>,
+                <button
+                  className="submit-guess-button buttons"
+                  onClick={[Function]}
+>
+                  Submit Guess
+</button>,
+              ],
+              "className": "input-holder",
             },
             "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Submit Guess",
-              "className": "submit-guess-button",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "Submit Guess",
-            "type": "button",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "aria-label": "Please Enter Your Guess",
+                  "className": "guess-field input-fields",
+                  "id": "user-guess",
+                  "name": "guess",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Submit Guess",
+                  "className": "submit-guess-button buttons",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Submit Guess",
+                "type": "button",
+              },
+            ],
+            "type": "span",
           },
         ],
         "type": "div",
@@ -542,7 +627,7 @@ ShallowWrapper {
 >
             <img
                         alt="Profile Picture"
-                        className="circle-image"
+                        className="circle-image game-image"
                         src="google.com"
             />
             <hr
@@ -557,21 +642,25 @@ ShallowWrapper {
             >
                         Name This Connection:
             </label>
-            <input
-                        aria-label="Please Enter Your Guess"
-                        className="guess-field input-fields"
-                        id="user-guess"
-                        name="guess"
-                        onChange={[Function]}
-                        type="text"
-                        value={undefined}
-            />
-            <button
-                        className="submit-guess-button"
-                        onClick={[Function]}
+            <span
+                        className="input-holder"
             >
-                        Submit Guess
-            </button>
+                        <input
+                                    aria-label="Please Enter Your Guess"
+                                    className="guess-field input-fields"
+                                    id="user-guess"
+                                    name="guess"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value={undefined}
+                        />
+                        <button
+                                    className="submit-guess-button buttons"
+                                    onClick={[Function]}
+                        >
+                                    Submit Guess
+                        </button>
+            </span>
 </div>,
           <div
             className="feedback-container"
@@ -591,7 +680,7 @@ ShallowWrapper {
             "children": Array [
               <img
                 alt="Profile Picture"
-                className="circle-image"
+                className="circle-image game-image"
                 src="google.com"
 />,
               <hr
@@ -608,7 +697,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "alt": "Profile Picture",
-                "className": "circle-image",
+                "className": "circle-image game-image",
                 "src": "google.com",
               },
               "ref": null,
@@ -640,21 +729,25 @@ ShallowWrapper {
 >
                 Name This Connection:
 </label>,
-              <input
-                aria-label="Please Enter Your Guess"
-                className="guess-field input-fields"
-                id="user-guess"
-                name="guess"
-                onChange={[Function]}
-                type="text"
-                value={undefined}
-/>,
-              <button
-                className="submit-guess-button"
-                onClick={[Function]}
+              <span
+                className="input-holder"
 >
-                Submit Guess
-</button>,
+                <input
+                                aria-label="Please Enter Your Guess"
+                                className="guess-field input-fields"
+                                id="user-guess"
+                                name="guess"
+                                onChange={[Function]}
+                                type="text"
+                                value={undefined}
+                />
+                <button
+                                className="submit-guess-button buttons"
+                                onClick={[Function]}
+                >
+                                Submit Guess
+                </button>
+</span>,
             ],
             "className": "guessfield-container",
           },
@@ -677,30 +770,59 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "aria-label": "Please Enter Your Guess",
-                "className": "guess-field input-fields",
-                "id": "user-guess",
-                "name": "guess",
-                "onChange": [Function],
-                "type": "text",
-                "value": undefined,
+                "children": Array [
+                  <input
+                    aria-label="Please Enter Your Guess"
+                    className="guess-field input-fields"
+                    id="user-guess"
+                    name="guess"
+                    onChange={[Function]}
+                    type="text"
+                    value={undefined}
+/>,
+                  <button
+                    className="submit-guess-button buttons"
+                    onClick={[Function]}
+>
+                    Submit Guess
+</button>,
+                ],
+                "className": "input-holder",
               },
               "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Submit Guess",
-                "className": "submit-guess-button",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "Submit Guess",
-              "type": "button",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-label": "Please Enter Your Guess",
+                    "className": "guess-field input-fields",
+                    "id": "user-guess",
+                    "name": "guess",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Submit Guess",
+                    "className": "submit-guess-button buttons",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Submit Guess",
+                  "type": "button",
+                },
+              ],
+              "type": "span",
             },
           ],
           "type": "div",

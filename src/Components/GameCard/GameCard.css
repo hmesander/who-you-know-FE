@@ -1,0 +1,67 @@
+.new-deck-container {
+  width: 70%;
+  margin: 2em auto;
+}
+
+.game-card-component {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  box-shadow:
+    0 2px 2px rgba(0,0,0,0.15),
+    0 11px 0 -5px #eee,
+    0 11px 1px -4px rgba(0,0,0,0.15),
+    0 22px 0 -10px #eee,
+    0 22px 1px -9px rgba(0,0,0,0.15);
+  width: 60%;
+  min-height: fit-content;
+  height: 60vh;
+  margin: 2.5em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.game-image {
+  margin-bottom: 1.5em;
+}
+
+.new-deck-button {
+  width: 20%;
+  height: 20px;
+}
+
+.guessfield-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-guess-button {
+  height: 24px;
+}
+
+.next-card-button {
+  font-family: Helvetica,Arial,sans-serif;
+  background-color: #f6e312;
+  border: 1px solid #e9ac1a;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #f6e312 0%,#f9c80d 100%);
+}
+
+.guess-field {
+  height: 20px;
+  width: 50%;
+  margin-right: 10px;
+  border-width: 1px;
+}
+
+label {
+  margin: 1.5em;
+}
+
+.feedback-container {
+  height: 80px;
+}

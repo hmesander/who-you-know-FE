@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
       <div className='card-component'>
         <div className='card-info-section'>
-          <img src={props.cardsToSort[0].image_url} alt="Smiley face" className="circle-image"></img>
+          <img src={props.cardsToSort[0].image_url} alt='Profile' className='circle-image'></img>
           <h3 className=''>{props.cardsToSort[0].first_last_name}</h3>
           <h6>{props.cardsToSort[0].job_title}</h6>
           <h6>{props.cardsToSort[0].school}</h6>
