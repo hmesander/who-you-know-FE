@@ -11,11 +11,11 @@ describe('PLAYCARDS TESTS', () => {
     wrapper = shallow(<PlayCards />);
   });
 
-  it('should match the snapshot when there is a gamedeck to play', () => {
+  it('should match the snapshot when there is no username', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('set the difficulty level in state when set difficulty is called', () => {
+  it('should set the difficulty level in state when set difficulty is called', () => {
     const mockEvent = {target: {value: 'easy'}};
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       json: () => Promise.resolve({
@@ -31,7 +31,8 @@ describe('PLAYCARDS TESTS', () => {
   it('should call set difficulty when the easy button is clicked', () => {
     const mockEvent = { target: { value: 'easy' } };
     const spy = spyOn(wrapper.instance(), 'setDifficulty');
-
+    wrapper.setState({userId: 12});
+    wrapper.instance().forceUpdate();
     const button = wrapper.find('.easy-button');
     button.simulate('click', mockEvent);
     expect(spy).toHaveBeenCalled();
@@ -41,7 +42,7 @@ describe('PLAYCARDS TESTS', () => {
     const mockEvent = { target: { value: 'medium' } };
     const spy = spyOn(wrapper.instance(), 'setDifficulty');
 
-    const button = wrapper.find('.medium-button');
+    const button = wrapper.find('.GameBoard');
     button.simulate('click', mockEvent);
     expect(spy).toHaveBeenCalled();
   });

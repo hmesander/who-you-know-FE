@@ -30,6 +30,7 @@ export class App extends Component {
       });
       let { idToken, accessToken } = await this.parseURL(history.location.hash);
       idToken = idKey;
+      accessToken = idKey;
       this.setState({
         idToken,
         accessToken

@@ -14,18 +14,21 @@ const Card = (props) => {
           <h6>{props.cardsToSort[0].school}</h6>
           <hr className='card-hr'></hr>
         </div>
-        <div className='card-button-container'>
-          <button 
-            className='circle-buttons downvote'
-            onClick={() => props.handleDownVote()}
-          >No Clue</button>
-          <button 
-            className='circle-buttons middlevote'
-            onClick={() => props.handleMiddleVote()}
-          >Vague Idea</button>
-          <button 
-            className='circle-buttons upvote' 
-            onClick={() => props.handleUpVote()}>BFF</button>
+        <div className='card-lower-container'>
+          <p className='card-lower-text'>How well do you know this connection?</p>
+          <div className='card-button-container'>
+            <button
+              className='circle-buttons downvote'
+              onClick={() => props.handleDownVote()}
+            >Who?</button>
+            <button
+              className='circle-buttons middlevote'
+              onClick={() => props.handleMiddleVote()}
+            >Vaguely</button>
+            <button
+              className='circle-buttons upvote'
+              onClick={() => props.handleUpVote()}>BFF</button>
+          </div>
         </div>
       </div>
     );

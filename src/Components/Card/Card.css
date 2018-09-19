@@ -42,5 +42,15 @@
 }
 
 .card-button-container {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 40px;
+}
+
+.card-button-container {
+  padding: 2px;
+}
+
+.card-lower-text {
+  padding-top: 30px;
 }
