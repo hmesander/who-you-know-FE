@@ -14,9 +14,9 @@ export default class Sort extends Component {
   }
 
   async componentDidMount() {
-    // const cards = await getConnectionsForUser(this.props.userId);
+    const cards = await getConnectionsForUser(this.props.userId);
     this.setState({
-      cards: mockData
+      cards: cards
     });
   }
 

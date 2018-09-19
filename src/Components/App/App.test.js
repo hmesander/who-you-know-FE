@@ -1,8 +1,8 @@
+/*eslint-disable no-undef*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { App } from './App';
-import { MemoryRouter } from 'react-router';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 
 describe('APP TESTS', () => {
@@ -87,14 +87,4 @@ describe('APP TESTS', () => {
     wrapper.instance().handlePlayDeck();
     expect(wrapper.instance().props.history).toEqual(['/play']);
   });
-
-  // it('should render sort component when path is /sort', () => {
-  //   const wrapper = shallow(
-  //     <MemoryRouter initialEntries={['/sort']}>
-  //       <App />
-  //     </MemoryRouter>
-  //   );
-  //   expect(wrapper.find('.PlayCards')).toHaveLength(0);
-  //   expect(wrapper.find('.Sort')).toHaveLength(1);
-  // });
 });

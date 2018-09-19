@@ -25,11 +25,11 @@ export default class PlayCards extends Component {
   }
 
   fetchCardsToPlay = async (difficulty) => {
-    // let results = await retrieveCardsToPlay(this.props.userId, difficulty);
+    let results = await retrieveCardsToPlay(this.props.userId, difficulty);
     this.setState({
       cards: mockData
     });
-    // return results;
+    return results;
   }
 
   render() {

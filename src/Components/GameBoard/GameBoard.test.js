@@ -1,3 +1,5 @@
+/*eslint-disable no-undef, camelcase*/
+
 import React from 'react';
 import GameBoard from './GameBoard';
 import { shallow } from 'enzyme';

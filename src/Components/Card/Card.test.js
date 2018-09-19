@@ -1,8 +1,8 @@
+/*eslint-disable no-undef, camelcase*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Card from './Card';
 import { shallow } from 'enzyme';
-
 
 describe('CARD TESTS', () => {
   it('should match the snapshot with cards to sort', () => {

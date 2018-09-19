@@ -1,3 +1,5 @@
+/*eslint-disable react/prop-types*/
+
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Controls from '../Controls/Controls.js';

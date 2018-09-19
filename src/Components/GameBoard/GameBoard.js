@@ -30,7 +30,7 @@ export default class GameBoard extends Component {
     if (this.state.guess) {
       this.checkGuessField();
     } else {
-      console.log('no input');
+      return;
     } 
   }
 

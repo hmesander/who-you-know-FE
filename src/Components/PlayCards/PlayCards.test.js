@@ -1,4 +1,4 @@
-/*eslint-disable no-undef camelcase*/
+/*eslint-disable no-undef, camelcase*/
 
 import React from 'react';
 import PlayCards from './PlayCards';
