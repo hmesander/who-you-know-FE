@@ -4,7 +4,6 @@ export const postTokens = async (accessToken, idToken) => {
     method: 'POST'
   });
   const results = await response.json();
-  console.log(results);
   return results;
 };
 
