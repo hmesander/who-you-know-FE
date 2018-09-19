@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  /* font-family: Sans-Serif; */
 }
 
 body {
@@ -69,7 +68,8 @@ body {
 }
 
 .sort-cards-button, .play-deck-button {
-  line-height: 1.2rem;
+  height: 24px;
+
   width: 13em;
   font-size: 0.8rem;
   font-weight: 400;

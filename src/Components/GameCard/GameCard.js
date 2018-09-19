@@ -35,13 +35,15 @@ const GameCard = (props) => {
     let fraction = props.correct / props.total;
     let percentage = Math.round(fraction * 100);
     return (
-      <div>
+      <div className='results-card'>
         <h3>Results:</h3>
         <p>Correct: {props.correct}</p>
         <p>Incorrect: {props.incorrect}</p>
-        <p>Percentage: %{percentage}</p>
-        {props.incorrect ? <button className='review-button' onClick={() => props.reviewIncorrect()}>Redo Incorrect</button> : null}
-        <button className='get-deck-button'onClick={() => props.getDeck()}>Get New Deck</button>
+        <p>Percentage: {percentage}%</p>
+        <div className='scoreboard-button-container'>
+          {props.incorrect ? <button className='review-button buttons' onClick={() => props.reviewIncorrect()}>Redo Incorrect</button> : null}
+          <button className='get-deck-button buttons' onClick={() => props.getDeck()}>Get New Deck</button>
+        </div>
       </div>
     );
   } else {
@@ -61,6 +63,7 @@ GameCard.propTypes = {
   handleChange: PropTypes.func,
   handleSubmit: PropTypes.func,
   getNextCard: PropTypes.func,
+  reviewIncorrect: PropTypes.func,
   guess: PropTypes.string,
   gameOver: PropTypes.bool,
   feedback: PropTypes.string,
