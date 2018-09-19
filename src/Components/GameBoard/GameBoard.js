@@ -66,7 +66,7 @@ export default class GameBoard extends Component {
 
   getDeck = () => {
     let cardsToSave = [...this.props.cardsToPlay];
-    let shortenedList = cardsToSave.splice(0, 12);
+    let shortenedList = cardsToSave.splice(0, 6);
     this.setState({
       cards: shortenedList,
       correct: 0,
