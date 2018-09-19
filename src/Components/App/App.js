@@ -116,5 +116,5 @@ export class App extends Component {
 export default withRouter(App);
 
 App.propTypes = {
-  history: PropTypes.string
+  history: PropTypes.object
 };

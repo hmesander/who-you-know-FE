@@ -12,6 +12,7 @@ export default class GameBoard extends Component {
       cards: [],
       correct: 0,
       incorrect: 0,
+      total: 0,
       feedback: '',
       answer: '',
       gameOver: false
@@ -51,19 +52,24 @@ export default class GameBoard extends Component {
 
   increaseCounter = () => {
     this.setState({
-      correct: this.state.correct + 1
+      correct: this.state.correct + 1,
+      total: this.state.total + 1
     });
   }
 
   decreaseCounter = () => {
     this.setState({
-      incorrect: this.state.incorrect + 1
+      incorrect: this.state.incorrect + 1,
+      total: this.state.total + 1
     });
   }
 
   getDeck = () => {
     this.setState({
-      cards: this.props.cardsToPlay
+      cards: this.props.cardsToPlay,
+      correct: 0,
+      incorrect: 0,
+      total: 0
     });
   }
 
@@ -107,14 +113,15 @@ export default class GameBoard extends Component {
       cards: incorrectAnswers,
       sorted: [],
       correct: 0,
-      incorrect: 0
+      incorrect: 0,
+      total: 0
     });
   }
 
   render() {
     return (
       <div>
-        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard} gameOver={this.state.gameOver} correct={this.state.correct} incorrect={this.state.incorrect} reviewIncorrect={this.reviewIncorrect}/>
+        <GameCard gameDeck={this.state.cards} handleSubmit={this.handleSubmit} handleChange={this.handleChange} guess={this.state.guess} getDeck={this.getDeck} feedback={this.state.feedback} getNextCard={this.getNextCard} gameOver={this.state.gameOver} correct={this.state.correct} incorrect={this.state.incorrect} reviewIncorrect={this.reviewIncorrect} total={this.state.total}/>
       </div>
     );
   }
