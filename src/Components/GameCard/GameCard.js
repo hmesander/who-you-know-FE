@@ -65,7 +65,6 @@ GameCard.propTypes = {
   getNextCard: PropTypes.func,
   reviewIncorrect: PropTypes.func,
   guess: PropTypes.string,
-  gameOver: PropTypes.bool,
   feedback: PropTypes.string,
   correct: PropTypes.number,
   total: PropTypes.number,

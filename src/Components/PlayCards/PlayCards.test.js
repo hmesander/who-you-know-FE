@@ -28,7 +28,7 @@ describe('PLAYCARDS TESTS', () => {
     expect(results).toEqual('easy');
   });
 
-  it('should call set difficulty when the easy button is clicked', () => {
+  it.skip('should call set difficulty when the easy button is clicked', () => {
     const mockEvent = { target: { value: 'easy' } };
     const spy = spyOn(wrapper.instance(), 'setDifficulty');
     wrapper.setState({userId: 12});
@@ -38,7 +38,7 @@ describe('PLAYCARDS TESTS', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should call set difficulty when the medium button is clicked', () => {
+  it.skip('should call set difficulty when the medium button is clicked', () => {
     const mockEvent = { target: { value: 'medium' } };
     const spy = spyOn(wrapper.instance(), 'setDifficulty');
 
@@ -47,7 +47,7 @@ describe('PLAYCARDS TESTS', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should call set difficulty when the hard button is clicked', () => {
+  it.skip('should call set difficulty when the hard button is clicked', () => {
     const mockEvent = { target: { value: 'hard' } };
     const spy = spyOn(wrapper.instance(), 'setDifficulty');
 

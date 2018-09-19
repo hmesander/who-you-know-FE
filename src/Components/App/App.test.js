@@ -47,13 +47,23 @@ describe('APP TESTS', () => {
   });
 
   it('should reset hash in state to an empty string when handleLogout is called', () => {
-    const wrapper = shallow(<App />, { disableLifecycleMethods: true });
+    const wrapper = shallow(<App history={[]}/>, { disableLifecycleMethods: true });
     wrapper.instance().setState({
       hash: 'taco'
     });
     wrapper.instance().handleLogout();
 
     expect(wrapper.instance().state.hash).toEqual('');
+  });
+
+  it('should push the history object to sort when handleLogout is called', () => {
+    const wrapper = shallow(<App history={[]} />, { disableLifecycleMethods: true });
+    wrapper.instance().setState({
+      hash: 'taco'
+    });
+    wrapper.instance().handleLogout();
+
+    expect(wrapper.instance().props.history).toEqual(['/']);
   });
 
   it('should parse a url and returns an object with the tokens when parseUrl is called', () => {

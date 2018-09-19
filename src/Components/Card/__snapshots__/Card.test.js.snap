@@ -65,18 +65,21 @@ ShallowWrapper {
                     <button
                               className="circle-buttons downvote"
                               onClick={[Function]}
+                              value="hard"
                     >
                               Who?
                     </button>
                     <button
                               className="circle-buttons middlevote"
                               onClick={[Function]}
+                              value="medium"
                     >
                               Vaguely
                     </button>
                     <button
                               className="circle-buttons upvote"
                               onClick={[Function]}
+                              value="easy"
                     >
                               BFF
                     </button>
@@ -195,18 +198,21 @@ ShallowWrapper {
               <button
                             className="circle-buttons downvote"
                             onClick={[Function]}
+                            value="hard"
               >
                             Who?
               </button>
               <button
                             className="circle-buttons middlevote"
                             onClick={[Function]}
+                            value="medium"
               >
                             Vaguely
               </button>
               <button
                             className="circle-buttons upvote"
                             onClick={[Function]}
+                            value="easy"
               >
                             BFF
               </button>
@@ -237,18 +243,21 @@ ShallowWrapper {
                 <button
                   className="circle-buttons downvote"
                   onClick={[Function]}
+                  value="hard"
 >
                   Who?
 </button>,
                 <button
                   className="circle-buttons middlevote"
                   onClick={[Function]}
+                  value="medium"
 >
                   Vaguely
 </button>,
                 <button
                   className="circle-buttons upvote"
                   onClick={[Function]}
+                  value="easy"
 >
                   BFF
 </button>,
@@ -265,6 +274,7 @@ ShallowWrapper {
                   "children": "Who?",
                   "className": "circle-buttons downvote",
                   "onClick": [Function],
+                  "value": "hard",
                 },
                 "ref": null,
                 "rendered": "Who?",
@@ -278,6 +288,7 @@ ShallowWrapper {
                   "children": "Vaguely",
                   "className": "circle-buttons middlevote",
                   "onClick": [Function],
+                  "value": "medium",
                 },
                 "ref": null,
                 "rendered": "Vaguely",
@@ -291,6 +302,7 @@ ShallowWrapper {
                   "children": "BFF",
                   "className": "circle-buttons upvote",
                   "onClick": [Function],
+                  "value": "easy",
                 },
                 "ref": null,
                 "rendered": "BFF",
@@ -349,18 +361,21 @@ ShallowWrapper {
                         <button
                                     className="circle-buttons downvote"
                                     onClick={[Function]}
+                                    value="hard"
                         >
                                     Who?
                         </button>
                         <button
                                     className="circle-buttons middlevote"
                                     onClick={[Function]}
+                                    value="medium"
                         >
                                     Vaguely
                         </button>
                         <button
                                     className="circle-buttons upvote"
                                     onClick={[Function]}
+                                    value="easy"
                         >
                                     BFF
                         </button>
@@ -479,18 +494,21 @@ ShallowWrapper {
                 <button
                                 className="circle-buttons downvote"
                                 onClick={[Function]}
+                                value="hard"
                 >
                                 Who?
                 </button>
                 <button
                                 className="circle-buttons middlevote"
                                 onClick={[Function]}
+                                value="medium"
                 >
                                 Vaguely
                 </button>
                 <button
                                 className="circle-buttons upvote"
                                 onClick={[Function]}
+                                value="easy"
                 >
                                 BFF
                 </button>
@@ -521,18 +539,21 @@ ShallowWrapper {
                   <button
                     className="circle-buttons downvote"
                     onClick={[Function]}
+                    value="hard"
 >
                     Who?
 </button>,
                   <button
                     className="circle-buttons middlevote"
                     onClick={[Function]}
+                    value="medium"
 >
                     Vaguely
 </button>,
                   <button
                     className="circle-buttons upvote"
                     onClick={[Function]}
+                    value="easy"
 >
                     BFF
 </button>,
@@ -549,6 +570,7 @@ ShallowWrapper {
                     "children": "Who?",
                     "className": "circle-buttons downvote",
                     "onClick": [Function],
+                    "value": "hard",
                   },
                   "ref": null,
                   "rendered": "Who?",
@@ -562,6 +584,7 @@ ShallowWrapper {
                     "children": "Vaguely",
                     "className": "circle-buttons middlevote",
                     "onClick": [Function],
+                    "value": "medium",
                   },
                   "ref": null,
                   "rendered": "Vaguely",
@@ -575,6 +598,7 @@ ShallowWrapper {
                     "children": "BFF",
                     "className": "circle-buttons upvote",
                     "onClick": [Function],
+                    "value": "easy",
                   },
                   "ref": null,
                   "rendered": "BFF",

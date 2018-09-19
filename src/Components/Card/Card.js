@@ -19,15 +19,18 @@ const Card = (props) => {
           <div className='card-button-container'>
             <button
               className='circle-buttons downvote'
-              onClick={() => props.handleDownVote()}
+              value='hard'
+              onClick={(event) => props.handleVote(event)}
             >Who?</button>
             <button
               className='circle-buttons middlevote'
-              onClick={() => props.handleMiddleVote()}
+              value='medium'
+              onClick={(event) => props.handleVote(event)}
             >Vaguely</button>
             <button
               className='circle-buttons upvote'
-              onClick={() => props.handleUpVote()}>BFF</button>
+              value='easy'
+              onClick={(event) => props.handleVote(event)}>BFF</button>
           </div>
         </div>
       </div>
@@ -53,5 +56,5 @@ Card.propTypes = {
   handleDownVote: PropTypes.func,
   handleMiddleVote: PropTypes.func,
   handlePlay: PropTypes.func,
-  handleUpVote: PropTypes.func
+  handleVote: PropTypes.func
 };

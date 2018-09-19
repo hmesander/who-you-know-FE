@@ -6,7 +6,6 @@ import PlayCards from '../PlayCards/PlayCards.js';
 import './App.css';
 import Auth from '../../Auth/Auth.js';
 import history from '../../history';
-import PropTypes from 'prop-types';
 import { postTokens } from '../../helpers/apiCalls.js';
 import { idKey } from '../../helpers/keys';
 const auth = new Auth();
@@ -47,7 +46,7 @@ export class App extends Component {
   }
 
   handleLogout = () => {
-    auth.logout();
+    // auth.logout();
     this.setState({
       hash: '', 
       userId: ''
@@ -115,7 +114,3 @@ export class App extends Component {
   }
 }
 export default withRouter(App);
-
-App.propTypes = {
-  history: PropTypes.object
-};

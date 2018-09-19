@@ -14,7 +14,7 @@ export default class Sort extends Component {
   }
 
   async componentDidMount() {
-    const cards = await getConnectionsForUser(this.props.userId);
+    // const cards = await getConnectionsForUser(this.props.userId);
     this.setState({
       cards: mockData
     });
@@ -31,26 +31,17 @@ export default class Sort extends Component {
     }
   }
 
-  handleUpVote = () => {
+  handleVote = (event) => {
+    let difficulty = event.target.value;
     let cardToSave = this.getNewCard();
-    updateDifficultyLevel(this.props.userId, cardToSave.id, 'easy');
-  }
-
-  handleMiddleVote = () => {
-    let cardToSave = this.getNewCard();
-    updateDifficultyLevel(this.props.userId, cardToSave.id, 'medium');
-  }
-
-  handleDownVote = () => {
-    let cardToSave = this.getNewCard();
-    updateDifficultyLevel(this.props.userId, cardToSave.id, 'hard');
+    updateDifficultyLevel(this.props.userId, cardToSave.id, difficulty);
   }
 
   render() {
     if (this.props.userId) {
       return (
         <div>
-          <Card cardsToSort={this.state.cards} handleUpVote={this.handleUpVote} handleMiddleVote={this.handleMiddleVote} handleDownVote={this.handleDownVote} handlePlay={this.props.handlePlay} />
+          <Card cardsToSort={this.state.cards} handleVote={this.handleVote} handlePlay={this.props.handlePlay} />
         </div>
       );
     } else {
